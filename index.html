@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SirSlidesALot Realmaps</title>
+<meta name="description" content="Real places, built as drivable BeamNG.drive maps from open elevation and map data.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<div id="app">
+  <div id="globe" aria-label="Globe showing every map's location"></div>
+
+  <aside id="index" aria-label="Maps">
+    <header class="brand">
+      <p class="eyebrow">SirSlidesALot</p>
+      <h1>Realmaps</h1>
+      <p class="thesis">Real places, built as drivable BeamNG.drive maps from open elevation, satellite and road data. Every square on the globe is a map's true footprint.</p>
+    </header>
+    <section>
+      <h2 class="section-label">Maps</h2>
+      <ol id="map-list" class="sheet-list"></ol>
+    </section>
+    <section>
+      <h2 class="section-label">Candidates</h2>
+      <ul id="cand-list" class="cand-list"></ul>
+    </section>
+    <footer class="credits">
+      <p>Not affiliated with BeamNG GmbH. Maps are in development; nothing is released yet.</p>
+      <p>Globe imagery: NASA Blue Marble. Globe: <a href="https://github.com/vasturiano/globe.gl">globe.gl</a>. Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>; elevation and imagery credits on each map and in <a href="CREDITS.md">CREDITS.md</a>.</p>
+      <p><a href="https://github.com/SirSlidesALot">github.com/SirSlidesALot</a></p>
+    </footer>
+  </aside>
+
+  <article id="sheet" hidden aria-live="polite">
+    <button id="sheet-close" class="icon-btn" type="button" aria-label="Close map">&times;</button>
+    <div id="sheet-body"></div>
+  </article>
+</div>
+
+<div id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Screenshot">
+  <button id="lb-close" class="icon-btn" type="button" aria-label="Close">&times;</button>
+  <button id="lb-prev" class="lb-nav" type="button" aria-label="Previous">&#8249;</button>
+  <figure>
+    <img id="lb-img" alt="">
+    <figcaption id="lb-cap"></figcaption>
+  </figure>
+  <button id="lb-next" class="lb-nav" type="button" aria-label="Next">&#8250;</button>
+</div>
+
+<script src="assets/vendor/globe.gl.min.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

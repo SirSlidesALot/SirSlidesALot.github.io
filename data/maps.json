@@ -1,0 +1,1319 @@
+{
+ "maps": [
+  {
+   "id": "kinneret",
+   "title": "Lake Kinneret",
+   "region": "Galilee, Israel",
+   "status": "development",
+   "pitch": "The whole lake and the road around it, with the far shore always in view across the water. 33 km square: you can start where the lake is still hidden and watch it appear as you drive down.",
+   "sources": [
+    "Copernicus GLO-30",
+    "Sentinel-2",
+    "OpenStreetMap"
+   ],
+   "lat": 32.8205,
+   "lon": 35.5815,
+   "extent_km": 32.77,
+   "cell_m": 4,
+   "footprint": [
+    [
+     35.402659,
+     32.676321
+    ],
+    [
+     35.403649,
+     32.713238
+    ],
+    [
+     35.40464,
+     32.750154
+    ],
+    [
+     35.405634,
+     32.78707
+    ],
+    [
+     35.406629,
+     32.823986
+    ],
+    [
+     35.407626,
+     32.860902
+    ],
+    [
+     35.408624,
+     32.897817
+    ],
+    [
+     35.409625,
+     32.934732
+    ],
+    [
+     35.410628,
+     32.971647
+    ],
+    [
+     35.454421,
+     32.970794
+    ],
+    [
+     35.498212,
+     32.969925
+    ],
+    [
+     35.542001,
+     32.969041
+    ],
+    [
+     35.585789,
+     32.968142
+    ],
+    [
+     35.629574,
+     32.967227
+    ],
+    [
+     35.673358,
+     32.966297
+    ],
+    [
+     35.717139,
+     32.965351
+    ],
+    [
+     35.760918,
+     32.964391
+    ],
+    [
+     35.759771,
+     32.927486
+    ],
+    [
+     35.758625,
+     32.890581
+    ],
+    [
+     35.757482,
+     32.853676
+    ],
+    [
+     35.75634,
+     32.81677
+    ],
+    [
+     35.755201,
+     32.779864
+    ],
+    [
+     35.754063,
+     32.742958
+    ],
+    [
+     35.752928,
+     32.706052
+    ],
+    [
+     35.751795,
+     32.669145
+    ],
+    [
+     35.70816,
+     32.670095
+    ],
+    [
+     35.664523,
+     32.67103
+    ],
+    [
+     35.620884,
+     32.67195
+    ],
+    [
+     35.577243,
+     32.672854
+    ],
+    [
+     35.533599,
+     32.673744
+    ],
+    [
+     35.489955,
+     32.674618
+    ],
+    [
+     35.446308,
+     32.675477
+    ],
+    [
+     35.402659,
+     32.676321
+    ]
+   ],
+   "events": 32,
+   "images": [
+    {
+     "full": "maps/kinneret/01.jpg",
+     "thumb": "maps/kinneret/01_t.jpg",
+     "caption": "Route 90 dropping toward the lake"
+    },
+    {
+     "full": "maps/kinneret/02.jpg",
+     "thumb": "maps/kinneret/02_t.jpg",
+     "caption": "The ring road on the shore"
+    },
+    {
+     "full": "maps/kinneret/03.jpg",
+     "thumb": "maps/kinneret/03_t.jpg",
+     "caption": "Dual carriageway along the water"
+    },
+    {
+     "full": "maps/kinneret/04.jpg",
+     "thumb": "maps/kinneret/04_t.jpg",
+     "caption": "Cliffs above the western shore"
+    },
+    {
+     "full": "maps/kinneret/05.jpg",
+     "thumb": "maps/kinneret/05_t.jpg",
+     "caption": "An overpass in the Galilee hills"
+    },
+    {
+     "full": "maps/kinneret/06.jpg",
+     "thumb": "maps/kinneret/06_t.jpg",
+     "caption": "The route 89 viaduct"
+    }
+   ],
+   "water_m": -214.5,
+   "elev_min_m": -214,
+   "elev_max_m": 1067
+  },
+  {
+   "id": "small_crater",
+   "title": "The Small Crater",
+   "region": "Negev, Israel",
+   "status": "prototype",
+   "pitch": "HaMakhtesh HaKatan, the small erosion crater of the northern Negev. Layered walls around a gravel floor, rock formations, baja courses and rally stages. Offroading country.",
+   "sources": [
+    "Copernicus GLO-30",
+    "Sentinel-2",
+    "OpenStreetMap"
+   ],
+   "lat": 30.95532,
+   "lon": 35.18999,
+   "extent_km": 12.29,
+   "cell_m": 1.5,
+   "footprint": [
+    [
+     35.124482,
+     30.900993
+    ],
+    [
+     35.124788,
+     30.914843
+    ],
+    [
+     35.125094,
+     30.928693
+    ],
+    [
+     35.125401,
+     30.942544
+    ],
+    [
+     35.125707,
+     30.956394
+    ],
+    [
+     35.126014,
+     30.970244
+    ],
+    [
+     35.126322,
+     30.984094
+    ],
+    [
+     35.126629,
+     30.997944
+    ],
+    [
+     35.126937,
+     31.011794
+    ],
+    [
+     35.143017,
+     31.011528
+    ],
+    [
+     35.159097,
+     31.01126
+    ],
+    [
+     35.175177,
+     31.01099
+    ],
+    [
+     35.191256,
+     31.010718
+    ],
+    [
+     35.207336,
+     31.010444
+    ],
+    [
+     35.223415,
+     31.010168
+    ],
+    [
+     35.239494,
+     31.00989
+    ],
+    [
+     35.255572,
+     31.00961
+    ],
+    [
+     35.255246,
+     30.995761
+    ],
+    [
+     35.25492,
+     30.981912
+    ],
+    [
+     35.254595,
+     30.968063
+    ],
+    [
+     35.254269,
+     30.954214
+    ],
+    [
+     35.253944,
+     30.940365
+    ],
+    [
+     35.253619,
+     30.926516
+    ],
+    [
+     35.253294,
+     30.912667
+    ],
+    [
+     35.252969,
+     30.898818
+    ],
+    [
+     35.236909,
+     30.899097
+    ],
+    [
+     35.220849,
+     30.899374
+    ],
+    [
+     35.204788,
+     30.899648
+    ],
+    [
+     35.188727,
+     30.899921
+    ],
+    [
+     35.172666,
+     30.900192
+    ],
+    [
+     35.156605,
+     30.900461
+    ],
+    [
+     35.140543,
+     30.900728
+    ],
+    [
+     35.124482,
+     30.900993
+    ]
+   ],
+   "events": 7,
+   "images": [
+    {
+     "full": "maps/small_crater/01.jpg",
+     "thumb": "maps/small_crater/01_t.jpg",
+     "caption": "The layered crater wall"
+    },
+    {
+     "full": "maps/small_crater/02.jpg",
+     "thumb": "maps/small_crater/02_t.jpg",
+     "caption": "A flag on the rim trail"
+    },
+    {
+     "full": "maps/small_crater/03.jpg",
+     "thumb": "maps/small_crater/03_t.jpg",
+     "caption": "A drivable rock arch on the floor"
+    },
+    {
+     "full": "maps/small_crater/04.jpg",
+     "thumb": "maps/small_crater/04_t.jpg",
+     "caption": "Crater floor, rim beyond"
+    },
+    {
+     "full": "maps/small_crater/05.jpg",
+     "thumb": "maps/small_crater/05_t.jpg",
+     "caption": "The Ma'ale Akrabim hairpins"
+    },
+    {
+     "full": "maps/small_crater/06.jpg",
+     "thumb": "maps/small_crater/06_t.jpg",
+     "caption": "A gravel track into the crater"
+    }
+   ],
+   "elev_min_m": -182,
+   "elev_max_m": 549
+  },
+  {
+   "id": "thasos_island",
+   "title": "Thasos",
+   "region": "North Aegean, Greece",
+   "status": "development",
+   "pitch": "The whole island: pine forest, mountain villages, a coast road all the way round, rally stages and an autosport park. Mount Athos stands on the horizon, 55 km away across the sea.",
+   "sources": [
+    "Copernicus GLO-30",
+    "Sentinel-2",
+    "ESA WorldCover",
+    "OpenStreetMap"
+   ],
+   "lat": 40.68481,
+   "lon": 24.64843,
+   "extent_km": 32.77,
+   "cell_m": 4,
+   "footprint": [
+    [
+     24.460314,
+     40.533244
+    ],
+    [
+     24.45892,
+     40.570108
+    ],
+    [
+     24.457523,
+     40.606972
+    ],
+    [
+     24.456124,
+     40.643836
+    ],
+    [
+     24.454722,
+     40.6807
+    ],
+    [
+     24.453318,
+     40.717563
+    ],
+    [
+     24.451911,
+     40.754426
+    ],
+    [
+     24.450501,
+     40.791288
+    ],
+    [
+     24.449089,
+     40.828151
+    ],
+    [
+     24.497619,
+     40.829214
+    ],
+    [
+     24.546152,
+     40.830257
+    ],
+    [
+     24.594687,
+     40.83128
+    ],
+    [
+     24.643225,
+     40.832282
+    ],
+    [
+     24.691765,
+     40.833264
+    ],
+    [
+     24.740307,
+     40.834226
+    ],
+    [
+     24.788852,
+     40.835167
+    ],
+    [
+     24.837399,
+     40.836088
+    ],
+    [
+     24.838597,
+     40.799215
+    ],
+    [
+     24.839792,
+     40.762342
+    ],
+    [
+     24.840985,
+     40.725469
+    ],
+    [
+     24.842176,
+     40.688596
+    ],
+    [
+     24.843365,
+     40.651722
+    ],
+    [
+     24.844552,
+     40.614848
+    ],
+    [
+     24.845736,
+     40.577974
+    ],
+    [
+     24.846919,
+     40.541099
+    ],
+    [
+     24.798585,
+     40.540188
+    ],
+    [
+     24.750253,
+     40.539257
+    ],
+    [
+     24.701924,
+     40.538305
+    ],
+    [
+     24.653597,
+     40.537333
+    ],
+    [
+     24.605273,
+     40.536341
+    ],
+    [
+     24.55695,
+     40.535329
+    ],
+    [
+     24.508631,
+     40.534297
+    ],
+    [
+     24.460314,
+     40.533244
+    ]
+   ],
+   "events": 17,
+   "images": [
+    {
+     "full": "maps/thasos_island/01.jpg",
+     "thumb": "maps/thasos_island/01_t.jpg",
+     "caption": "The island from above"
+    },
+    {
+     "full": "maps/thasos_island/02.jpg",
+     "thumb": "maps/thasos_island/02_t.jpg",
+     "caption": "Golden Beach"
+    },
+    {
+     "full": "maps/thasos_island/03.jpg",
+     "thumb": "maps/thasos_island/03_t.jpg",
+     "caption": "Mount Athos from the south-west coast"
+    },
+    {
+     "full": "maps/thasos_island/04.jpg",
+     "thumb": "maps/thasos_island/04_t.jpg",
+     "caption": "Pine-covered ridges above the sea"
+    },
+    {
+     "full": "maps/thasos_island/05.jpg",
+     "thumb": "maps/thasos_island/05_t.jpg",
+     "caption": "A chapel beside a mountain road"
+    },
+    {
+     "full": "maps/thasos_island/06.jpg",
+     "thumb": "maps/thasos_island/06_t.jpg",
+     "caption": "A road through the olive groves"
+    }
+   ],
+   "water_m": 0.0,
+   "elev_min_m": 0,
+   "elev_max_m": 1191
+  },
+  {
+   "id": "naxos_island",
+   "title": "Naxos",
+   "region": "Cyclades, Greece",
+   "status": "development",
+   "pitch": "The largest of the Cyclades, coast to summit. Dry hills, stone villages, salt pans, and roads that crest a saddle to open onto the sea.",
+   "sources": [
+    "Copernicus GLO-30",
+    "Sentinel-2",
+    "ESA WorldCover",
+    "OpenStreetMap"
+   ],
+   "lat": 37.06022,
+   "lon": 25.46998,
+   "extent_km": 32.77,
+   "cell_m": 4,
+   "footprint": [
+    [
+     25.289082,
+     36.910074
+    ],
+    [
+     25.288257,
+     36.946981
+    ],
+    [
+     25.28743,
+     36.983888
+    ],
+    [
+     25.286602,
+     37.020794
+    ],
+    [
+     25.285772,
+     37.057701
+    ],
+    [
+     25.284941,
+     37.094607
+    ],
+    [
+     25.284108,
+     37.131512
+    ],
+    [
+     25.283274,
+     37.168418
+    ],
+    [
+     25.282438,
+     37.205323
+    ],
+    [
+     25.328577,
+     37.205983
+    ],
+    [
+     25.374718,
+     37.206626
+    ],
+    [
+     25.42086,
+     37.20725
+    ],
+    [
+     25.467004,
+     37.207856
+    ],
+    [
+     25.513149,
+     37.208444
+    ],
+    [
+     25.559295,
+     37.209015
+    ],
+    [
+     25.605442,
+     37.209567
+    ],
+    [
+     25.651591,
+     37.210102
+    ],
+    [
+     25.652248,
+     37.17319
+    ],
+    [
+     25.652903,
+     37.136278
+    ],
+    [
+     25.653557,
+     37.099366
+    ],
+    [
+     25.654209,
+     37.062454
+    ],
+    [
+     25.654861,
+     37.025541
+    ],
+    [
+     25.655511,
+     36.988628
+    ],
+    [
+     25.65616,
+     36.951715
+    ],
+    [
+     25.656808,
+     36.914802
+    ],
+    [
+     25.610838,
+     36.914273
+    ],
+    [
+     25.564869,
+     36.913726
+    ],
+    [
+     25.518901,
+     36.913162
+    ],
+    [
+     25.472935,
+     36.91258
+    ],
+    [
+     25.426969,
+     36.91198
+    ],
+    [
+     25.381006,
+     36.911362
+    ],
+    [
+     25.335043,
+     36.910727
+    ],
+    [
+     25.289082,
+     36.910074
+    ]
+   ],
+   "events": 19,
+   "images": [
+    {
+     "full": "maps/naxos_island/01.jpg",
+     "thumb": "maps/naxos_island/01_t.jpg",
+     "caption": "Cresting toward the sea"
+    },
+    {
+     "full": "maps/naxos_island/02.jpg",
+     "thumb": "maps/naxos_island/02_t.jpg",
+     "caption": "The road down from Moni"
+    },
+    {
+     "full": "maps/naxos_island/03.jpg",
+     "thumb": "maps/naxos_island/03_t.jpg",
+     "caption": "Inland hills"
+    },
+    {
+     "full": "maps/naxos_island/04.jpg",
+     "thumb": "maps/naxos_island/04_t.jpg",
+     "caption": "The salt pans on the south-west coast"
+    },
+    {
+     "full": "maps/naxos_island/05.jpg",
+     "thumb": "maps/naxos_island/05_t.jpg",
+     "caption": "A stone bench above the sea"
+    }
+   ],
+   "water_m": 0.0,
+   "elev_min_m": 0,
+   "elev_max_m": 991
+  },
+  {
+   "id": "bavella",
+   "title": "Col de Bavella",
+   "region": "Corsica, France",
+   "status": "development",
+   "pitch": "The Col de Bavella and the D268 hairpins climbing to it from both sides, under the granite towers of the Aiguilles de Bavella. Built from 0.5 m LiDAR.",
+   "sources": [
+    "IGN LiDAR HD",
+    "Sentinel-2",
+    "ESA WorldCover",
+    "OpenStreetMap"
+   ],
+   "lat": 41.79234,
+   "lon": 9.22905,
+   "extent_km": 8.19,
+   "cell_m": 2.0,
+   "footprint": [
+    [
+     9.179649,
+     41.755535
+    ],
+    [
+     9.179675,
+     41.764758
+    ],
+    [
+     9.179701,
+     41.773981
+    ],
+    [
+     9.179726,
+     41.783205
+    ],
+    [
+     9.179752,
+     41.792428
+    ],
+    [
+     9.179778,
+     41.801651
+    ],
+    [
+     9.179804,
+     41.810874
+    ],
+    [
+     9.17983,
+     41.820097
+    ],
+    [
+     9.179855,
+     41.82932
+    ],
+    [
+     9.192187,
+     41.8293
+    ],
+    [
+     9.204518,
+     41.829279
+    ],
+    [
+     9.21685,
+     41.829256
+    ],
+    [
+     9.229181,
+     41.829232
+    ],
+    [
+     9.241513,
+     41.829207
+    ],
+    [
+     9.253844,
+     41.82918
+    ],
+    [
+     9.266176,
+     41.829152
+    ],
+    [
+     9.278507,
+     41.829123
+    ],
+    [
+     9.278467,
+     41.8199
+    ],
+    [
+     9.278427,
+     41.810677
+    ],
+    [
+     9.278388,
+     41.801454
+    ],
+    [
+     9.278348,
+     41.792231
+    ],
+    [
+     9.278308,
+     41.783008
+    ],
+    [
+     9.278268,
+     41.773785
+    ],
+    [
+     9.278228,
+     41.764562
+    ],
+    [
+     9.278188,
+     41.755339
+    ],
+    [
+     9.265871,
+     41.755368
+    ],
+    [
+     9.253553,
+     41.755396
+    ],
+    [
+     9.241236,
+     41.755422
+    ],
+    [
+     9.228919,
+     41.755448
+    ],
+    [
+     9.216601,
+     41.755471
+    ],
+    [
+     9.204284,
+     41.755494
+    ],
+    [
+     9.191967,
+     41.755515
+    ],
+    [
+     9.179649,
+     41.755535
+    ]
+   ],
+   "events": 4,
+   "images": [
+    {
+     "full": "maps/bavella/01.jpg",
+     "thumb": "maps/bavella/01_t.jpg",
+     "caption": "The Aiguilles de Bavella from the col"
+    },
+    {
+     "full": "maps/bavella/02.jpg",
+     "thumb": "maps/bavella/02_t.jpg",
+     "caption": "At the pass"
+    },
+    {
+     "full": "maps/bavella/03.jpg",
+     "thumb": "maps/bavella/03_t.jpg",
+     "caption": "The D268 climbing through pines"
+    },
+    {
+     "full": "maps/bavella/04.jpg",
+     "thumb": "maps/bavella/04_t.jpg",
+     "caption": "A bend on the D268"
+    },
+    {
+     "full": "maps/bavella/05.jpg",
+     "thumb": "maps/bavella/05_t.jpg",
+     "caption": "The eastern hairpins from above"
+    }
+   ],
+   "elev_min_m": 292,
+   "elev_max_m": 1867
+  },
+  {
+   "id": "tremola",
+   "title": "Tremola",
+   "region": "Ticino, Switzerland",
+   "status": "development",
+   "pitch": "The Tremola, the cobbled old Gotthard pass road, its hairpins stacked up the Val Tremola from Airolo to the hospice. Built from swisstopo's 0.5 m terrain model.",
+   "sources": [
+    "swisstopo swissALTI3D",
+    "Sentinel-2",
+    "ESA WorldCover",
+    "OpenStreetMap"
+   ],
+   "lat": 46.54303,
+   "lon": 8.585,
+   "extent_km": 4.1,
+   "cell_m": 2.0,
+   "footprint": [
+    [
+     8.558439,
+     46.5245
+    ],
+    [
+     8.558401,
+     46.529107
+    ],
+    [
+     8.558364,
+     46.533715
+    ],
+    [
+     8.558327,
+     46.538322
+    ],
+    [
+     8.558289,
+     46.54293
+    ],
+    [
+     8.558252,
+     46.547538
+    ],
+    [
+     8.558215,
+     46.552145
+    ],
+    [
+     8.558177,
+     46.556753
+    ],
+    [
+     8.55814,
+     46.56136
+    ],
+    [
+     8.56482,
+     46.561386
+    ],
+    [
+     8.5715,
+     46.561411
+    ],
+    [
+     8.57818,
+     46.561436
+    ],
+    [
+     8.584859,
+     46.56146
+    ],
+    [
+     8.591539,
+     46.561484
+    ],
+    [
+     8.598219,
+     46.561508
+    ],
+    [
+     8.604899,
+     46.561531
+    ],
+    [
+     8.611579,
+     46.561554
+    ],
+    [
+     8.611612,
+     46.556947
+    ],
+    [
+     8.611645,
+     46.552339
+    ],
+    [
+     8.611678,
+     46.547731
+    ],
+    [
+     8.611711,
+     46.543124
+    ],
+    [
+     8.611744,
+     46.538516
+    ],
+    [
+     8.611776,
+     46.533909
+    ],
+    [
+     8.611809,
+     46.529301
+    ],
+    [
+     8.611842,
+     46.524693
+    ],
+    [
+     8.605167,
+     46.52467
+    ],
+    [
+     8.598491,
+     46.524647
+    ],
+    [
+     8.591816,
+     46.524624
+    ],
+    [
+     8.58514,
+     46.5246
+    ],
+    [
+     8.578465,
+     46.524575
+    ],
+    [
+     8.57179,
+     46.52455
+    ],
+    [
+     8.565114,
+     46.524525
+    ],
+    [
+     8.558439,
+     46.5245
+    ]
+   ],
+   "events": 2,
+   "images": [
+    {
+     "full": "maps/tremola/01.jpg",
+     "thumb": "maps/tremola/01_t.jpg",
+     "caption": "The hairpins of the Val Tremola"
+    },
+    {
+     "full": "maps/tremola/02.jpg",
+     "thumb": "maps/tremola/02_t.jpg",
+     "caption": "Cobbled hairpins stacked on the slope"
+    },
+    {
+     "full": "maps/tremola/03.jpg",
+     "thumb": "maps/tremola/03_t.jpg",
+     "caption": "Driver's eye on the cobbles"
+    },
+    {
+     "full": "maps/tremola/04.jpg",
+     "thumb": "maps/tremola/04_t.jpg",
+     "caption": "The Leventina valley below the pass"
+    }
+   ],
+   "elev_min_m": 1116,
+   "elev_max_m": 2692
+  },
+  {
+   "id": "ouessant",
+   "title": "Ouessant",
+   "region": "Brittany, France",
+   "status": "next",
+   "pitch": "The westernmost island of Brittany: narrow lanes, cliffs and reefs, with a real seabed from 1 m land-and-sea LiDAR. Next up.",
+   "sources": [
+    "IGN LiDAR HD",
+    "SHOM Litto3D",
+    "OpenStreetMap"
+   ],
+   "lat": 48.46614,
+   "lon": -5.09343,
+   "extent_km": 10.24,
+   "cell_m": 1.25,
+   "footprint": [
+    [
+     -5.16069,
+     48.41883
+    ],
+    [
+     -5.161178,
+     48.430338
+    ],
+    [
+     -5.161667,
+     48.441845
+    ],
+    [
+     -5.162155,
+     48.453352
+    ],
+    [
+     -5.162644,
+     48.46486
+    ],
+    [
+     -5.163134,
+     48.476367
+    ],
+    [
+     -5.163623,
+     48.487874
+    ],
+    [
+     -5.164113,
+     48.499381
+    ],
+    [
+     -5.164603,
+     48.510888
+    ],
+    [
+     -5.147285,
+     48.511213
+    ],
+    [
+     -5.129965,
+     48.511535
+    ],
+    [
+     -5.112646,
+     48.511854
+    ],
+    [
+     -5.095326,
+     48.512171
+    ],
+    [
+     -5.078006,
+     48.512485
+    ],
+    [
+     -5.060686,
+     48.512796
+    ],
+    [
+     -5.043365,
+     48.513105
+    ],
+    [
+     -5.026045,
+     48.513412
+    ],
+    [
+     -5.025586,
+     48.501903
+    ],
+    [
+     -5.025127,
+     48.490395
+    ],
+    [
+     -5.024669,
+     48.478887
+    ],
+    [
+     -5.024211,
+     48.467379
+    ],
+    [
+     -5.023753,
+     48.45587
+    ],
+    [
+     -5.023296,
+     48.444362
+    ],
+    [
+     -5.022839,
+     48.432854
+    ],
+    [
+     -5.022382,
+     48.421345
+    ],
+    [
+     -5.039671,
+     48.42104
+    ],
+    [
+     -5.056961,
+     48.420732
+    ],
+    [
+     -5.07425,
+     48.420422
+    ],
+    [
+     -5.091538,
+     48.420109
+    ],
+    [
+     -5.108827,
+     48.419793
+    ],
+    [
+     -5.126115,
+     48.419475
+    ],
+    [
+     -5.143403,
+     48.419154
+    ],
+    [
+     -5.16069,
+     48.41883
+    ]
+   ],
+   "events": 0,
+   "images": []
+  }
+ ],
+ "candidates": [
+  {
+   "id": "el_hierro",
+   "title": "El Hierro",
+   "region": "Canary Islands, Spain",
+   "lat": 27.74,
+   "lon": -18.02,
+   "note": "Volcanic escarpments and a harbour for gymkhana."
+  },
+  {
+   "id": "la_gomera",
+   "title": "La Gomera",
+   "region": "Canary Islands, Spain",
+   "lat": 28.1,
+   "lon": -17.23,
+   "note": "Deep ravines and laurel forest."
+  },
+  {
+   "id": "elba",
+   "title": "Elba",
+   "region": "Tuscany, Italy",
+   "lat": 42.78,
+   "lon": 10.28,
+   "note": "Mountain roads and coves."
+  },
+  {
+   "id": "terceira",
+   "title": "Terceira",
+   "region": "Azores, Portugal",
+   "lat": 38.72,
+   "lon": -27.22,
+   "note": "Green calderas in the Atlantic."
+  },
+  {
+   "id": "yakushima",
+   "title": "Yakushima",
+   "region": "Kagoshima, Japan",
+   "lat": 30.35,
+   "lon": 130.53,
+   "note": "Ancient cedar forest and a ring road."
+  },
+  {
+   "id": "arran",
+   "title": "Isle of Arran",
+   "region": "Scotland",
+   "lat": 55.58,
+   "lon": -5.23,
+   "note": "Scotland in miniature, with a road around the coast."
+  },
+  {
+   "id": "groix",
+   "title": "Groix",
+   "region": "Brittany, France",
+   "lat": 47.635,
+   "lon": -3.46,
+   "note": "A small Breton island with a real seabed."
+  },
+  {
+   "id": "yeu",
+   "title": "Ile d'Yeu",
+   "region": "Vendee, France",
+   "lat": 46.71,
+   "lon": -2.34,
+   "note": "A small Atlantic island built from 0.5 m LiDAR."
+  }
+ ]
+}
