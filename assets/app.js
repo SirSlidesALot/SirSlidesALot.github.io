@@ -1,5 +1,6 @@
 /* Realmaps globe: one pin and one true footprint per map, a sheet per map.
-   Data comes from data/maps.json, written by tools/export_showcase.py. */
+   Data comes from data/maps.json, written by the realmaps repo's
+   `scripts/showcase.py site --out <this repo>` from showcase/<map>/. */
 (function () {
   "use strict";
 
@@ -7,6 +8,7 @@
     development: "In development",
     prototype: "Prototype",
     next: "Next up",
+    released: "Released",
     candidate: "Candidate",
   };
   const LABEL_BELOW = new Set(["small_crater", "naxos_island"]);   // keeps labels clear of their neighbours
@@ -35,7 +37,11 @@
 
   fetch("data/maps.json")
     .then((r) => r.json())
-    .then((d) => { data = d; build(); })
+    .then((d) => {
+      data = d;
+      if (d.credit) document.querySelector("#credit-line em").textContent = d.credit;
+      build();
+    })
     .catch(() => {
       document.getElementById("map-list").append(el("li", "no-shots", "The map list could not be loaded. Reload the page to try again."));
     });
