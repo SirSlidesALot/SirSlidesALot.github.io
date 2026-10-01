@@ -1,7 +1,8 @@
 # Credits
 
-The screenshots on this site show maps built from open data. These credit lines
-travel with them.
+The screenshots on this site, and the map plates laid on the globe (each map
+seen from straight above, drawn from its own build), show maps built from open
+data. These credit lines travel with them.
 
 ## Map data
 
@@ -18,8 +19,12 @@ travel with them.
 - **IGN LiDAR HD** (terrain of Col de Bavella and Ouessant): Source: IGN, LiDAR HD,
   Licence Ouverte Etalab 2.0.
 - **swisstopo swissALTI3D** (terrain of the Tremola): © swisstopo.
-- **SHOM / IGN Litto3D** (Ouessant's seabed, when built): Source: SHOM / IGN, Litto3D,
+- **IGN Spain MDT02** (terrain of Masca): derived from MDT02 CC-BY 4.0 scne.es
+  (Instituto Geográfico Nacional / CNIG).
+- **SHOM / IGN Litto3D** (Ouessant's seabed): Source: SHOM / IGN, Litto3D,
   Licence Ouverte Etalab 2.0.
+- **EMODnet Bathymetry** (Ouessant's seabed where Litto3D has gaps): EMODnet
+  Bathymetry Consortium, EMODnet Digital Bathymetry (DTM), CC BY 4.0.
 
 ## This site
 

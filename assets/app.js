@@ -67,7 +67,7 @@
       .polygonCapColor((p) => (p.id === current ? "rgba(232,163,58,0.45)" : "rgba(232,163,58,0.22)"))
       .polygonSideColor(() => "rgba(232,163,58,0.35)")
       .polygonStrokeColor(() => "#e8a33a")
-      .polygonAltitude(0.003)
+      .polygonAltitude(SLAB)
       .polygonCapCurvatureResolution(0.2)
       .onPolygonClick((p) => go(p.id))
       .htmlElementsData(everything)
@@ -75,13 +75,16 @@
       .htmlLng((d) => d.lon)
       .htmlAltitude(0.004)
       .htmlTransitionDuration(0)
-      .htmlElement(makePin);
+      .htmlElement(makePin)
+      .onGlobeReady(initPlates);
 
+    window.realmapsGlobe = globe;   // for the headless check and the console
     const controls = globe.controls();
     controls.autoRotate = !reduceMotion;
     controls.autoRotateSpeed = 0.25;
-    controls.minDistance = 101.5;   // never quite touch the ground: the Blue Marble is ~10 km a pixel
+    controls.minDistance = 100.12;  // ~8 km up: close enough to fill the view with the smallest plate
     ["start"].forEach((ev) => controls.addEventListener(ev, () => { controls.autoRotate = false; }));
+    controls.addEventListener("change", updatePlates);
 
     fit();
     window.addEventListener("resize", fit);
@@ -91,6 +94,166 @@
     document.getElementById("sheet-close").addEventListener("click", () => { location.hash = ""; });
     window.addEventListener("hashchange", route);
     route();
+  }
+
+  /* ---- plates: each map seen from above, laid on the globe where it really is ----
+     The Blue Marble is ~10 km a pixel; a plate is 2-8 m a pixel. It sits just above
+     its own footprint, whose amber sides become the slab's edge, and fades in as the
+     camera comes close. The 1024 px image loads first, the full one only up close. */
+  const EARTH_KM = 6371;
+  const SLAB = 0.00025;            // the footprint's height above the globe: ~1.6 km
+  const PLATE_ALT = SLAB + 0.00008;  // just under the outline, which three-globe draws 1e-4 above the cap
+  const SHADOW_ALT = 0.00001;        // the plate's shadow, on the ground
+  const SHADOW_GROW = 0.07;          // how far the shadow reaches past the plate, as a share of its width
+  let THREE_ = null;
+  const plates = new Map();
+
+  function initPlates() {
+    // globe.gl bundles three.js without exposing it. Its own objects carry the
+    // classes, so the plates are built from those rather than a second copy of three.
+    const gm = globe.globeMaterial();
+    let globeMesh = null;
+    globe.scene().traverse((o) => { if (o.isMesh && o.material === gm) globeMesh = o; });
+    if (!globeMesh || !gm.map) return;
+    const Mesh = globeMesh.constructor;
+    const probe = new Mesh();
+    THREE_ = {
+      Mesh,
+      BufferGeometry: probe.geometry.constructor,
+      MeshBasicMaterial: probe.material.constructor,
+      Attribute: globeMesh.geometry.getAttribute("position").constructor,
+      Texture: gm.map.constructor,
+      colorSpace: gm.map.colorSpace,
+    };
+    data.maps.filter((m) => m.plate).forEach(makePlate);
+    updatePlates();
+  }
+
+  function sheet(m, alt, grow, shift = 0) {
+    // The plate's grid draped at an altitude; grow > 0 pushes every point out
+    // from the map's centre by that share of the width (the shadow's margin).
+    const T = THREE_;
+    const n = m.plate.grid_steps;
+    const pos = [], uv = [], idx = [];
+    const [clng, clat] = m.plate.grid[Math.floor(m.plate.grid.length / 2)];
+    const [wl, nl] = m.plate.grid[0], [el_, sl] = m.plate.grid[m.plate.grid.length - 1];
+    const dlng = (el_ - wl) * shift, dlat = (sl - nl) * shift;   // toward the south-east
+    m.plate.grid.forEach(([lng, lat], i) => {
+      const r = i % (n + 1), q = Math.floor(i / (n + 1));
+      const s = 1 + grow * 2;
+      const p = globe.getCoords(clat + (lat - clat) * s + dlat, clng + (lng - clng) * s + dlng, alt);
+      pos.push(p.x, p.y, p.z);
+      uv.push(r / n, 1 - q / n);
+    });
+    for (let r = 0; r < n; r++) {
+      for (let c = 0; c < n; c++) {
+        const a = r * (n + 1) + c, b = a + 1, d = a + n + 1, e = d + 1;
+        idx.push(a, d, b, b, d, e);
+      }
+    }
+    const geo = new T.BufferGeometry();
+    geo.setAttribute("position", new T.Attribute(new Float32Array(pos), 3));
+    geo.setAttribute("uv", new T.Attribute(new Float32Array(uv), 2));
+    geo.setIndex(idx);
+    geo.computeBoundingSphere();
+    return geo;
+  }
+
+  let shadowTex = null;
+  function shadowTexture() {
+    // A soft dark square: solid where the plate covers it, fading out past its edge.
+    if (shadowTex) return shadowTex;
+    const c = document.createElement("canvas");
+    c.width = c.height = 128;
+    const g = c.getContext("2d");
+    const img = g.createImageData(128, 128);
+    const inner = 0.5 / (1 + 2 * SHADOW_GROW);    // the plate's half width in this square
+    for (let y = 0; y < 128; y++) {
+      for (let x = 0; x < 128; x++) {
+        const d = Math.max(Math.abs((x + 0.5) / 128 - 0.5), Math.abs((y + 0.5) / 128 - 0.5));
+        const t = Math.min(1, Math.max(0, (0.5 - d) / (0.5 - inner)));
+        img.data[(y * 128 + x) * 4 + 3] = Math.round(255 * 0.55 * t * t * (3 - 2 * t));
+      }
+    }
+    g.putImageData(img, 0, 0);
+    shadowTex = new THREE_.Texture(c);
+    shadowTex.needsUpdate = true;
+    return shadowTex;
+  }
+
+  function makePlate(m) {
+    const T = THREE_;
+    const smat = new T.MeshBasicMaterial({ transparent: true, opacity: 0, depthWrite: false });
+    smat.map = shadowTexture();
+    smat.color.setRGB(0, 0, 0);
+    smat.side = 2;
+    const shadow = new T.Mesh(sheet(m, SHADOW_ALT, SHADOW_GROW, 0.025), smat);
+    shadow.renderOrder = 9;
+    shadow.visible = false;
+    globe.scene().add(shadow);
+    const geo = sheet(m, PLATE_ALT, 0);
+    const mat = new T.MeshBasicMaterial({ transparent: true, opacity: 0, depthWrite: false });
+    mat.side = 2;                  // DoubleSide: the winding then cannot hide it
+    mat.polygonOffset = true;
+    mat.polygonOffsetFactor = -4;
+    mat.polygonOffsetUnits = -4;
+    const mesh = new T.Mesh(geo, mat);
+    mesh.renderOrder = 10;
+    mesh.visible = false;
+    globe.scene().add(mesh);
+    plates.set(m.id, { m, mesh, mat, shadow, smat, tex: { lo: null, hi: null }, loading: { lo: false, hi: false } });
+  }
+
+  function loadPlate(p, which) {
+    if (p.tex[which] || p.loading[which]) return;
+    p.loading[which] = true;
+    const img = new Image();
+    img.decoding = "async";
+    img.onload = () => {
+      p.loading[which] = false;
+      const tex = new THREE_.Texture(img);
+      tex.colorSpace = THREE_.colorSpace;
+      tex.anisotropy = globe.renderer().capabilities.getMaxAnisotropy();
+      tex.needsUpdate = true;
+      p.tex[which] = tex;
+      updatePlates();
+    };
+    img.onerror = () => { p.loading[which] = false; };
+    img.src = which === "hi" ? p.m.plate.hi : p.m.plate.lo;
+  }
+
+  function dropHi(p) {
+    // A full plate is ~85 MB on the GPU: let it go once the camera has left.
+    if (!p.tex.hi) return;
+    if (p.mat.map === p.tex.hi) { p.mat.map = p.tex.lo; p.mat.needsUpdate = true; }
+    p.tex.hi.dispose();
+    p.tex.hi = null;
+  }
+
+  const smooth = (a, b, x) => { const t = Math.min(1, Math.max(0, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
+
+  function updatePlates() {
+    if (!THREE_) return;
+    const pov = globe.pointOfView();
+    const rad = Math.PI / 180;
+    plates.forEach((p) => {
+      // How big the map looks: its width over the camera's height above the ground.
+      const k = p.m.extent_km / (Math.max(pov.altitude, 1e-6) * EARTH_KM);
+      const fade = smooth(0.004, 0.012, k);
+      // Great-circle distance from the view's centre, as a share of what is in view.
+      const c = Math.sin(pov.lat * rad) * Math.sin(p.m.lat * rad) +
+        Math.cos(pov.lat * rad) * Math.cos(p.m.lat * rad) * Math.cos((pov.lng - p.m.lon) * rad);
+      const off = Math.acos(Math.min(1, Math.max(-1, c))) * EARTH_KM / Math.max(pov.altitude * EARTH_KM, 1);
+      if (fade > 0) loadPlate(p, "lo");
+      if (k > 0.06 && off < 1.5) loadPlate(p, "hi");
+      else if (k < 0.03 || off > 3) dropHi(p);
+      const want = p.tex.hi || p.tex.lo;
+      if (want && p.mat.map !== want) { p.mat.map = want; p.mat.needsUpdate = true; }
+      p.mat.opacity = want ? fade : 0;
+      p.mesh.visible = p.mat.opacity > 0.001;
+      p.smat.opacity = p.mat.opacity;
+      p.shadow.visible = p.mesh.visible;
+    });
   }
 
   function fit() {
@@ -188,7 +351,8 @@
     app.classList.add("sheet-open");
     fit();
     globe.controls().autoRotate = false;
-    const alt = d.kind === "map" ? Math.min(0.3, Math.max(0.06, d.extent_km / 160)) : 0.35;
+    // A map flies in until its plate fills most of the view; a candidate stays regional.
+    const alt = d.kind === "map" ? (d.plate ? Math.max(0.0012, (d.extent_km * 1.6) / EARTH_KM) : Math.min(0.3, Math.max(0.06, d.extent_km / 160))) : 0.35;
     globe.pointOfView({ lat: d.lat, lng: d.lon, altitude: alt }, reduceMotion ? 0 : 1600);
     document.title = `${d.title} · SirSlidesALot Realmaps`;
   }
