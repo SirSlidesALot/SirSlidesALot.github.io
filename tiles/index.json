@@ -357,7 +357,10 @@
       6716
      ]
     }
-   }
+   },
+   "modes": [
+    "edge_match"
+   ]
   },
   "thasos_island": {
    "day": "2025-07-08",
