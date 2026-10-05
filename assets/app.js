@@ -35,10 +35,14 @@
 
   let data, globe, current = null, pins = new Map();
 
-  fetch("data/maps.json")
-    .then((r) => r.json())
-    .then((d) => {
+  Promise.all([
+    fetch("data/maps.json").then((r) => r.json()),
+    // the Sentinel-2 rings round each map; without them the globe is Blue Marble only
+    fetch("tiles/index.json").then((r) => (r.ok ? r.json() : {})).catch(() => ({})),
+  ])
+    .then(([d, ti]) => {
       data = d;
+      rings = (ti && ti.s2) || {};
       if (d.credit) document.querySelector("#credit-line em").textContent = d.credit;
       build();
     })
@@ -55,8 +59,9 @@
 
     globe = Globe({ animateIn: !reduceMotion })(container)
       .backgroundColor("rgba(0,0,0,0)")
-      .globeImageUrl("assets/earth/earth-blue-marble.jpg")
-      .bumpImageUrl("assets/earth/earth-topology.png")
+      .globeImageUrl("assets/earth/earth-1024.jpg")   // only under the tiles: the poles, and before they load
+      .globeTileEngineUrl(tileUrl)
+      .globeTileEngineMaxLevel(BM_MAX)
       .showAtmosphere(true)
       .atmosphereColor("#7fb2d6")
       .atmosphereAltitude(0.16)
@@ -79,12 +84,14 @@
       .onGlobeReady(initPlates);
 
     window.realmapsGlobe = globe;   // for the headless check and the console
+    initTiles();
     const controls = globe.controls();
     controls.autoRotate = !reduceMotion;
     controls.autoRotateSpeed = 0.25;
     controls.minDistance = 100.12;  // ~8 km up: close enough to fill the view with the smallest plate
     ["start"].forEach((ev) => controls.addEventListener(ev, () => { controls.autoRotate = false; }));
     controls.addEventListener("change", updatePlates);
+    controls.addEventListener("change", updateTileCap);
 
     fit();
     window.addEventListener("resize", fit);
@@ -94,6 +101,77 @@
     document.getElementById("sheet-close").addEventListener("click", () => { location.hash = ""; });
     window.addEventListener("hashchange", route);
     route();
+  }
+
+  /* ---- tiles: the Earth in levels, sharp as the camera comes down (tk-0008) ----
+     z0-4 Blue Marble hosted here; z5-8 the same layer from NASA GIBS (its maximum);
+     z11-14 round each map our own Sentinel-2 tiles (tiles/index.json, written by the
+     realmaps repo's scripts/globe_tiles.py). globe.gl draws ONE level at a time and
+     keeps the coarser ones under it, so a tile we do not have is hidden and the
+     level below shows through. */
+  const GIBS = "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/BlueMarble_ShadedRelief/default/GoogleMapsCompatible_Level8/";
+  const BM_LOCAL_MAX = 4, BM_MAX = 8, RING_MAX = 14;
+  // globe.gl's own levels give ~3-6 screen pixels per tile pixel. Scaling level t's threshold
+  // by 2^(t/4), at most x4, gives ~1 close up, and keeps the whole-globe view at z3 (64 tiles).
+  const levelBias = (t) => Math.min(4, 2 ** (t / 4));
+  const NO_TILE = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
+  let rings = {}, tileEngine = null, tileCap = BM_MAX;
+
+  function tileUrl(x, y, l) {
+    if (l <= BM_LOCAL_MAX) return `tiles/bm/${l}/${x}/${y}.jpg`;
+    for (const sid in rings) {
+      const lv = rings[sid].levels[l];
+      if (!lv) continue;
+      const [x0, x1, y0, y1] = lv.range, h = lv.hole;
+      if (x < x0 || x > x1 || y < y0 || y > y1) continue;
+      if (h && x >= h[0] && x <= h[1] && y >= h[2] && y <= h[3]) return NO_TILE;   // under the plate
+      return `tiles/s2/${sid}/${l}/${x}/${y}.${rings[sid].fmt}`;
+    }
+    return l <= BM_MAX ? `${GIBS}${l}/${y}/${x}.jpeg` : NO_TILE;
+  }
+
+  function initTiles() {
+    // three-globe adds its tile engine to the scene only on its first update, so this
+    // runs again from onGlobeReady and on camera moves until it finds it.
+    if (tileEngine) return;
+    globe.scene().traverse((o) => { if (!tileEngine && "thresholds" in o && "tileUrl" in o) tileEngine = o; });
+    if (!tileEngine) return;
+    tileEngine.thresholds = tileEngine.thresholds.map((v, t) => v * levelBias(t));
+    const add = tileEngine.add.bind(tileEngine);
+    tileEngine.add = (...objs) => {
+      objs.forEach((o) => {
+        const im = o.material && o.material.map && o.material.map.image;
+        if (im && im.src === NO_TILE) o.visible = false;
+      });
+      return add(...objs);
+    };
+  }
+
+  const tileXY = (lat, lng, z) => {
+    const n = 2 ** z, s = Math.sin(Math.max(-85, Math.min(85, lat)) * Math.PI / 180);
+    return [Math.floor((lng + 180) / 360 * n), Math.floor((0.5 - Math.log((1 + s) / (1 - s)) / (4 * Math.PI)) * n)];
+  };
+
+  function updateTileCap() {
+    // The finest level whose ring tiles cover the middle of the view; else Blue Marble's.
+    initTiles();
+    if (!tileEngine) return;
+    const pov = globe.pointOfView(), cam = globe.camera();
+    let want = tileEngine.thresholds.findIndex((v) => v <= pov.altitude);   // the engine's own rule
+    if (want < 0) want = tileEngine.thresholds.length;
+    let cap = BM_MAX;
+    if (want > BM_MAX) {
+      const hh = pov.altitude * EARTH_KM * Math.tan(cam.fov * Math.PI / 360) * 0.5;   // half the half-height, km
+      const dlat = hh / 111.32, dlng = (hh * cam.aspect) / (111.32 * Math.cos(pov.lat * Math.PI / 180));
+      search: for (let z = Math.min(want, RING_MAX); z > BM_MAX; z--) {
+        const [ax, ay] = tileXY(pov.lat + dlat, pov.lng - dlng, z), [bx, by] = tileXY(pov.lat - dlat, pov.lng + dlng, z);
+        for (const sid in rings) {
+          const lv = rings[sid].levels[z];
+          if (lv && ax >= lv.range[0] && bx <= lv.range[1] && ay >= lv.range[2] && by <= lv.range[3]) { cap = z; break search; }
+        }
+      }
+    }
+    if (cap !== tileCap) { tileCap = cap; globe.globeTileEngineMaxLevel(cap); }
   }
 
   /* ---- plates: each map seen from above, laid on the globe where it really is ----
@@ -109,12 +187,21 @@
   const plates = new Map();
 
   function initPlates() {
+    // From onGlobeReady, and from the first camera moves: with tiles on, three-globe can
+    // report ready before the chain that registers onGlobeReady has finished.
+    if (THREE_) return;
+    initTiles();
     // globe.gl bundles three.js without exposing it. Its own objects carry the
     // classes, so the plates are built from those rather than a second copy of three.
     const gm = globe.globeMaterial();
     let globeMesh = null;
     globe.scene().traverse((o) => { if (o.isMesh && o.material === gm) globeMesh = o; });
     if (!globeMesh || !gm.map) return;
+    // The small Blue Marble stays under the tiles (globe.gl hides the globe when tiles
+    // are on): it fills the poles the mercator tiles never reach, and any tile not loaded yet.
+    Object.defineProperty(globeMesh, "visible", { get: () => true, set: () => {} });
+    globeMesh.scale.setScalar(0.999);
+    globeMesh.renderOrder = -1;
     const Mesh = globeMesh.constructor;
     const probe = new Mesh();
     THREE_ = {
@@ -233,6 +320,7 @@
   const smooth = (a, b, x) => { const t = Math.min(1, Math.max(0, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
 
   function updatePlates() {
+    if (!THREE_) initPlates();
     if (!THREE_) return;
     const pov = globe.pointOfView();
     const rad = Math.PI / 180;

@@ -28,7 +28,8 @@ data. These credit lines travel with them.
 
 ## This site
 
-- Globe imagery: NASA Blue Marble (NASA Earth Observatory), public domain.
+- Globe imagery: NASA Blue Marble shaded relief, public domain. We acknowledge the use of imagery provided by services from NASA's Global Imagery Browse Services (GIBS), part of NASA's Earth Science Data and Information System (ESDIS).
+- Close to each map, the globe shows the map's own Sentinel-2 scene: Contains modified Copernicus Sentinel data 2025.
 - Globe rendering: [globe.gl](https://github.com/vasturiano/globe.gl) by Vasco Asturiano, MIT licence.
 - Fonts: Barlow, Barlow Condensed and IBM Plex Mono, SIL Open Font License, via Google Fonts.
 
