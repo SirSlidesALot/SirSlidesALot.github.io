@@ -533,7 +533,8 @@
     }
    },
    "modes": [
-    "single_date"
+    "single_date",
+    "edge_match"
    ]
   }
  }
