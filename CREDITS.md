@@ -8,12 +8,13 @@ data. These credit lines travel with them.
 
 - **OpenStreetMap** (roads, places, features): © OpenStreetMap contributors,
   licensed under the [Open Database License (ODbL) 1.0](https://opendatacommons.org/licenses/odbl/1-0/).
-- **Copernicus DEM GLO-30** (terrain of Lake Kinneret, the Small Crater, Thasos
-  and Naxos; the distant land round the Kent Group): produced using
+- **Copernicus DEM GLO-30** (terrain of Lake Kinneret, the Small Crater, Thasos,
+  Naxos and Jeju; the distant land round the Kent Group): produced using
   Copernicus WorldDEM-30 © DLR e.V. 2010-2014 and © Airbus Defence and Space
   GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all
   rights reserved.
-- **Sentinel-2** (terrain colour): Contains modified Copernicus Sentinel data 2025.
+- **Sentinel-2** (terrain colour): Contains modified Copernicus Sentinel data 2025;
+  for Jeju, Contains modified Copernicus Sentinel data 2022.
 - **ESA WorldCover** (forest and bare ground on the islands, Bavella and Tremola):
   © ESA WorldCover project 2021 / Contains modified Copernicus Sentinel data
   (2021) processed by ESA WorldCover consortium, CC BY 4.0.
@@ -35,7 +36,7 @@ data. These credit lines travel with them.
 ## This site
 
 - Globe imagery: NASA Blue Marble shaded relief, public domain. We acknowledge the use of imagery provided by services from NASA's Global Imagery Browse Services (GIBS), part of NASA's Earth Science Data and Information System (ESDIS).
-- Close to each map, the globe shows the map's own Sentinel-2 scene: Contains modified Copernicus Sentinel data 2025.
+- Close to each map, the globe shows the map's own Sentinel-2 scene: Contains modified Copernicus Sentinel data 2025 (round Jeju, 2022).
 - Globe rendering: [globe.gl](https://github.com/vasturiano/globe.gl) by Vasco Asturiano, MIT licence.
 - Fonts: Barlow, Barlow Condensed and IBM Plex Mono, SIL Open Font License, via Google Fonts.
 
