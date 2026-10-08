@@ -9,9 +9,10 @@ data. These credit lines travel with them.
 - **OpenStreetMap** (roads, places, features): © OpenStreetMap contributors,
   licensed under the [Open Database License (ODbL) 1.0](https://opendatacommons.org/licenses/odbl/1-0/).
 - **Copernicus DEM GLO-30** (terrain of Lake Kinneret, the Small Crater, Thasos
-  and Naxos): produced using Copernicus WorldDEM-30 © DLR e.V. 2010-2014 and
-  © Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the
-  European Union and ESA; all rights reserved.
+  and Naxos; the distant land round the Kent Group): produced using
+  Copernicus WorldDEM-30 © DLR e.V. 2010-2014 and © Airbus Defence and Space
+  GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all
+  rights reserved.
 - **Sentinel-2** (terrain colour): Contains modified Copernicus Sentinel data 2025.
 - **ESA WorldCover** (forest and bare ground on the islands, Bavella and Tremola):
   © ESA WorldCover project 2021 / Contains modified Copernicus Sentinel data
@@ -25,6 +26,11 @@ data. These credit lines travel with them.
   Licence Ouverte Etalab 2.0.
 - **EMODnet Bathymetry** (Ouessant's seabed where Litto3D has gaps): EMODnet
   Bathymetry Consortium, EMODnet Digital Bathymetry (DTM), CC BY 4.0.
+- **theLIST Tasmania** (terrain of the Kent Group, fitted to its contours): Contours
+  10m, Spot Heights and Coastline from the LIST © State of Tasmania, CC BY 3.0 AU.
+- **Geoscience Australia AusBathyTopo** (the Kent Group's seabed): © Commonwealth
+  of Australia (Geoscience Australia) 2022, AusBathyTopo (Bass Strait) 30m 2022,
+  CC BY 4.0.
 
 ## This site
 
