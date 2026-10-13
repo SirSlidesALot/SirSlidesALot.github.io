@@ -3389,7 +3389,7 @@
    "title": "Ouessant",
    "region": "Brittany, France",
    "status": "development",
-   "pitch": "The westernmost island of Brittany: narrow lanes, cliffs and reefs, with a real seabed from 1 m land-and-sea LiDAR.",
+   "pitch": "The westernmost island of Brittany: narrow lanes, cliffs and reefs, the spire of Lampaul and the pivot windmills on the heath, with a real seabed from 1 m land-and-sea LiDAR.",
    "sources": [
     "IGN LiDAR HD",
     "SHOM Litto3D",
@@ -3454,6 +3454,26 @@
      "full": "maps/ouessant/03.jpg",
      "thumb": "maps/ouessant/03_t.jpg",
      "caption": "The north-east cliffs from above"
+    },
+    {
+     "full": "maps/ouessant/04.jpg",
+     "thumb": "maps/ouessant/04_t.jpg",
+     "caption": "The spire of Saint-Pol-Aurélien over Lampaul"
+    },
+    {
+     "full": "maps/ouessant/05.jpg",
+     "thumb": "maps/ouessant/05_t.jpg",
+     "caption": "The chapel of Notre-Dame d'Espérance"
+    },
+    {
+     "full": "maps/ouessant/06.jpg",
+     "thumb": "maps/ouessant/06_t.jpg",
+     "caption": "The chapel of Notre-Dame de Bon Voyage"
+    },
+    {
+     "full": "maps/ouessant/07.jpg",
+     "thumb": "maps/ouessant/07_t.jpg",
+     "caption": "The Karaes windmill"
     }
    ],
    "params_generated_utc": "2026-09-29T03:48:23+00:00",
