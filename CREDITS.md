@@ -9,18 +9,25 @@ data. These credit lines travel with them.
 - **OpenStreetMap** (roads, places, features): © OpenStreetMap contributors,
   licensed under the [Open Database License (ODbL) 1.0](https://opendatacommons.org/licenses/odbl/1-0/).
 - **Copernicus DEM GLO-30** (terrain of Lake Kinneret, the Small Crater, Thasos,
-  Naxos and Jeju; the distant land round the Kent Group): produced using
+  Naxos and Jeju; the distant land round several other maps): produced using
   Copernicus WorldDEM-30 © DLR e.V. 2010-2014 and © Airbus Defence and Space
   GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all
   rights reserved.
 - **Sentinel-2** (terrain colour): Contains modified Copernicus Sentinel data 2025;
-  for Jeju, Contains modified Copernicus Sentinel data 2022.
-- **ESA WorldCover** (forest and bare ground on the islands, Bavella and Tremola):
+  for Jeju, 2022; for Fjallabak, 2020; for Trollstigen, 2019.
+- **ESA WorldCover** (forest and bare ground on most maps):
   © ESA WorldCover project 2021 / Contains modified Copernicus Sentinel data
   (2021) processed by ESA WorldCover consortium, CC BY 4.0.
-- **IGN LiDAR HD** (terrain of Col de Bavella and Ouessant): Source: IGN, LiDAR HD,
+- **IGN LiDAR HD** (terrain of Col de Bavella, Ouessant and the Col de Turini): Source: IGN, LiDAR HD,
   Licence Ouverte Etalab 2.0.
 - **swisstopo swissALTI3D** (terrain of the Tremola): © swisstopo.
+- **Environment Agency LiDAR** (terrain of Hardknott Pass): © Environment Agency
+  copyright and/or database right 2022. All rights reserved. Licensed under the
+  [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
+- **ArcticDEM** (terrain of Fjallabak): DEMs provided by the Polar Geospatial Center
+  under NSF-OPP awards 1043681, 1559691, 1542736, 1810976, and 2129685. CC BY 4.0.
+- **Kartverket** (terrain of Trollstigen): Contains data from Kartverket © Kartverket,
+  CC BY 4.0.
 - **IGN Spain MDT02** (terrain of Masca): derived from MDT02 CC-BY 4.0 scne.es
   (Instituto Geográfico Nacional / CNIG).
 - **SHOM / IGN Litto3D** (Ouessant's seabed): Source: SHOM / IGN, Litto3D,
