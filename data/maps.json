@@ -754,7 +754,7 @@
    "title": "Hardknott Pass",
    "region": "Lake District, Cumbria, England",
    "status": "development",
-   "pitch": "Hardknott and Wrynose in the Lake District: England's steepest single-track fell roads, barely a car wide at up to 31 %, over the passes between Eskdale and Little Langdale, with 106 km of fell tracks round them, driven on the left. Built from 1 m Environment Agency LiDAR.",
+   "pitch": "Hardknott and Wrynose in the Lake District: England's steepest single-track fell roads, barely a car wide at up to 31 %, over the passes between Eskdale and Little Langdale, with 109 km of fell tracks round them and the shores of Wast Water and Coniston Water, driven on the left. Built from 1 m Environment Agency LiDAR.",
    "sources": [
     "Environment Agency LiDAR",
     "Sentinel-2",
@@ -817,6 +817,11 @@
      "full": "maps/hardknott/03.jpg",
      "thumb": "maps/hardknott/03_t.jpg",
      "caption": "A walled lane in Little Langdale"
+    },
+    {
+     "full": "maps/hardknott/04.jpg",
+     "thumb": "maps/hardknott/04_t.jpg",
+     "caption": "Coniston Water from the air"
     }
    ],
    "params_generated_utc": "2026-10-11T21:45:20+00:00",
@@ -5282,7 +5287,7 @@
    "title": "Col de Turini",
    "region": "Alpes-Maritimes, France",
    "status": "development",
-   "pitch": "The Col de Turini in the Alpes-Maritimes: the hairpin climbs from La Bollène-Vésubie and Moulinet over the col, the road on to Peira-Cava and the Authion loop above it, with 321 km of mountain tracks between them. Built from IGN LiDAR HD.",
+   "pitch": "The Col de Turini in the Alpes-Maritimes: the hairpin climbs from La Bollène-Vésubie and Moulinet over the col, the road on to Peira-Cava and the Authion loop above it, with 322 km of mountain tracks between them. Built from IGN LiDAR HD.",
    "sources": [
     "IGN LiDAR HD",
     "Sentinel-2",
