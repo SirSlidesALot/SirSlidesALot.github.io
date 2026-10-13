@@ -806,22 +806,32 @@
     {
      "full": "maps/hardknott/01.jpg",
      "thumb": "maps/hardknott/01_t.jpg",
-     "caption": "The hairpins on Hardknott's east side"
+     "caption": "Wast Water, up the lake to Great Gable"
     },
     {
      "full": "maps/hardknott/02.jpg",
      "thumb": "maps/hardknott/02_t.jpg",
-     "caption": "Hardknott's east climb from the air"
+     "caption": "A bend on Hardknott's east side, looking down towards Cockley Beck"
     },
     {
      "full": "maps/hardknott/03.jpg",
      "thumb": "maps/hardknott/03_t.jpg",
-     "caption": "A walled lane in Little Langdale"
+     "caption": "Hardknott's east side from the air, down to Cockley Beck"
     },
     {
      "full": "maps/hardknott/04.jpg",
      "thumb": "maps/hardknott/04_t.jpg",
-     "caption": "Coniston Water from the air"
+     "caption": "A walled lane in Little Langdale"
+    },
+    {
+     "full": "maps/hardknott/05.jpg",
+     "thumb": "maps/hardknott/05_t.jpg",
+     "caption": "Coniston Water from the air, down the lake from its head"
+    },
+    {
+     "full": "maps/hardknott/06.jpg",
+     "thumb": "maps/hardknott/06_t.jpg",
+     "caption": "Coniston Water from the east shore, across to the Old Man of Coniston"
     }
    ],
    "params_generated_utc": "2026-10-11T21:45:20+00:00",
