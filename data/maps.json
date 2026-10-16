@@ -4230,12 +4230,27 @@
     {
      "full": "maps/soelden/01.jpg",
      "thumb": "maps/soelden/01_t.jpg",
-     "caption": "The map's area from Sentinel-2, July 2022: Sölden in the valley, the alm roads pale threads through the forest"
+     "caption": "Above Sölden, the gravel climb towards Gaislach Alm folds through the forest"
     },
     {
      "full": "maps/soelden/02.jpg",
      "thumb": "maps/soelden/02_t.jpg",
-     "caption": "The relief and its roads: gravel alm roads in yellow, rougher tracks in blue, closed ones in violet"
+     "caption": "Gravel alm tracks on the forested slopes east of Sölden, the village below"
+    },
+    {
+     "full": "maps/soelden/03.jpg",
+     "thumb": "maps/soelden/03_t.jpg",
+     "caption": "Across the Ötztal from the west: Sölden under the forested east slope, alm huts above"
+    },
+    {
+     "full": "maps/soelden/04.jpg",
+     "thumb": "maps/soelden/04_t.jpg",
+     "caption": "Sölden from the forest on the west side, the east side's alm tracks across the valley"
+    },
+    {
+     "full": "maps/soelden/05.jpg",
+     "thumb": "maps/soelden/05_t.jpg",
+     "caption": "From the Rettenbach alm track, across to the east side's forest and high meadows"
     }
    ],
    "params_generated_utc": "2026-10-16T10:16:46+00:00",
