@@ -74,7 +74,7 @@
       .polygonStrokeColor(() => "#e8a33a")
       .polygonAltitude(SLAB)
       .polygonCapCurvatureResolution(0.2)
-      .onPolygonClick((p) => go(p.id))
+      .onPolygonClick((p, e) => { if (!(e && pinAt(e.clientX, e.clientY))) go(p.id); })   // a pin's own tap wins
       .htmlElementsData(everything)
       .htmlLat((d) => d.lat)
       .htmlLng((d) => d.lon)
@@ -89,9 +89,10 @@
     controls.autoRotate = !reduceMotion;
     controls.autoRotateSpeed = 0.25;
     controls.minDistance = 100.12;  // ~8 km up: close enough to fill the view with the smallest plate
-    ["start"].forEach((ev) => controls.addEventListener(ev, () => { controls.autoRotate = false; }));
+    ["start"].forEach((ev) => controls.addEventListener(ev, () => { controls.autoRotate = false; stopFlight(); }));
     controls.addEventListener("change", updatePlates);
     controls.addEventListener("change", updateTileCap);
+    pinPointer(container);
 
     fit();
     window.addEventListener("resize", fit);
@@ -368,14 +369,67 @@
       pin.append(tag, stem, dot);
     }
     if (d.kind === "cand") tag.hidden = true;   // candidates crowd; name on hover or when chosen
-    pin.addEventListener("mouseenter", () => { tag.hidden = false; });
-    pin.addEventListener("mouseleave", () => { if (d.kind === "cand" && current !== d.id) tag.hidden = true; });
+    // The pin takes no pointer events (site.css), so the wheel, a pinch or a drag that starts
+    // on a label reaches the globe's controls: the labels sit in globe.gl's HTML layer, a
+    // SIBLING of the canvas, so their events never bubble to it. Hover and tap come from
+    // pinPointer's hit test instead; the keyboard and an assistive click still reach the pin.
     const open = (e) => { e.stopPropagation(); go(d.id); };
     pin.addEventListener("click", open);
     pin.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") open(e); });
-    pins.set(d.id, { pin, tag, kind: d.kind });
+    pins.set(d.id, { pin, tag, dot, kind: d.kind });
     wrap.append(pin);
     return wrap;
+  }
+
+  // The pin under a point (client px), or null; the nearest dot wins where labels overlap.
+  // A pin on the globe's far side is display:none, so its box is empty.
+  function pinAt(x, y) {
+    let best = null, bestD = Infinity;
+    pins.forEach((p, id) => {
+      const r = p.pin.getBoundingClientRect();
+      if (!r.width || x < r.left - 2 || x > r.right + 2 || y < r.top - 2 || y > r.bottom + 2) return;
+      const dr = p.dot.getBoundingClientRect();
+      const dd = Math.hypot(x - (dr.left + dr.right) / 2, y - (dr.top + dr.bottom) / 2);
+      if (dd < bestD) { bestD = dd; best = id; }
+    });
+    return best;
+  }
+
+  // Hover and tap for the pins, read from the pointer events the globe already gets.
+  function pinPointer(container) {
+    let hover = null, down = null, fingers = 0;
+    const setHover = (id) => {
+      if (id === hover) return;
+      const old = hover && pins.get(hover);
+      if (old) {
+        old.pin.classList.remove("hover");
+        if (old.kind === "cand" && current !== hover) old.tag.hidden = true;
+      }
+      hover = id;
+      const now = id && pins.get(id);
+      if (now) { now.pin.classList.add("hover"); now.tag.hidden = false; }
+      container.classList.toggle("on-pin", !!now);
+    };
+    container.addEventListener("pointermove", (e) => {
+      if (e.pointerType !== "touch") setHover(pinAt(e.clientX, e.clientY));
+    }, { passive: true });
+    container.addEventListener("pointerleave", () => setHover(null), { passive: true });
+    // A tap: one pointer, down and up within a few px; a drag or a pinch is the globe's.
+    container.addEventListener("pointerdown", (e) => {
+      fingers += 1;
+      down = fingers === 1 ? { id: e.pointerId, x: e.clientX, y: e.clientY } : null;
+    }, { passive: true, capture: true });
+    const up = (e) => {
+      fingers = Math.max(0, fingers - 1);
+      const d = down;
+      if (!d || d.id !== e.pointerId) return;
+      down = null;
+      if (e.type !== "pointerup" || e.button > 0 || Math.hypot(e.clientX - d.x, e.clientY - d.y) > 6) return;
+      const id = pinAt(e.clientX, e.clientY);
+      if (id) go(id);
+    };
+    container.addEventListener("pointerup", up, { passive: true, capture: true });
+    container.addEventListener("pointercancel", up, { passive: true, capture: true });
   }
 
   function renderLists() {
@@ -441,8 +495,50 @@
     globe.controls().autoRotate = false;
     // A map flies in until its plate fills most of the view; a candidate stays regional.
     const alt = d.kind === "map" ? (d.plate ? Math.max(0.0012, (d.extent_km * 1.6) / EARTH_KM) : Math.min(0.3, Math.max(0.06, d.extent_km / 160))) : 0.35;
-    globe.pointOfView({ lat: d.lat, lng: d.lon, altitude: alt }, reduceMotion ? 0 : 1600);
+    flyTo({ lat: d.lat, lng: d.lon, altitude: alt });
     document.title = `${d.title} · SirSlidesALot Realmaps`;
+  }
+
+  // The camera's flight to a place. From close in over one place to another, it climbs until
+  // both are in view (at most the whole globe), crosses, and comes down: altitude moves in log
+  // space (an even zoom rate), the ground along the great circle, while high. A short hop, or
+  // a flight from high up, has no climb. Any drag, wheel or pinch stops it where it is.
+  let flight = 0;
+  const stopFlight = () => { if (flight) cancelAnimationFrame(flight); flight = 0; };
+  function flyTo(to) {
+    stopFlight();
+    const from = globe.pointOfView();
+    if (reduceMotion) { globe.pointOfView(to, 0); return; }
+    const rad = Math.PI / 180;
+    const vec = (p) => [Math.cos(p.lat * rad) * Math.cos(p.lng * rad), Math.cos(p.lat * rad) * Math.sin(p.lng * rad), Math.sin(p.lat * rad)];
+    const A = vec(from), B = vec(to);
+    const arc = Math.acos(Math.min(1, Math.max(-1, A[0] * B[0] + A[1] * B[1] + A[2] * B[2])));   // radians = Earth radii
+    const a0 = Math.max(from.altitude, 1e-4), a1 = Math.max(to.altitude, 1e-4);
+    // Both ends in view: half the arc inside ~80 % of half the view (fov 50 deg) needs ~1.35 x the arc.
+    const top = Math.min(wide() ? 2.1 : 2.6, 1.35 * arc);
+    const peak = top > 1.2 * Math.max(a0, a1) ? top : Math.max(a0, a1);
+    const up = Math.log2(peak / a0), down = Math.log2(peak / a1);   // doublings each way
+    const cross = arc / peak > 0.05 ? 1 : 0;
+    const ms = Math.min(4500, Math.max(1600, 180 * (up + down) + 500 * cross));
+    const tu = (180 * up) / ms, td = 1 - (180 * down) / ms;   // the climb ends, the descent starts
+    const ease = (x) => (x < 0.5 ? 2 * x * x : 1 - Math.pow(-2 * x + 2, 2) / 2);
+    const clamp01 = (x) => Math.min(1, Math.max(0, x));
+    // The ground moves from halfway up the climb to halfway down the descent.
+    const g0 = tu / 2, g1 = td + (1 - td) / 2;
+    const L0 = Math.log(a0), Lp = Math.log(peak), L1 = Math.log(a1);
+    const t0 = performance.now();
+    const step = (now) => {
+      const t = clamp01((now - t0) / ms);
+      const L = t < tu ? L0 + (Lp - L0) * ease(t / tu) : t > td ? Lp + (L1 - Lp) * ease((t - td) / (1 - td)) : Lp;
+      const f = ease(clamp01((t - g0) / Math.max(g1 - g0, 1e-6)));
+      const s = arc > 1e-9 ? Math.sin(arc) : 0;
+      const wa = s ? Math.sin((1 - f) * arc) / s : 1 - f, wb = s ? Math.sin(f * arc) / s : f;
+      const v = [0, 1, 2].map((i) => wa * A[i] + wb * B[i]);
+      const lat = Math.atan2(v[2], Math.hypot(v[0], v[1])) / rad, lng = Math.atan2(v[1], v[0]) / rad;
+      globe.pointOfView({ lat, lng, altitude: t >= 1 ? to.altitude : Math.exp(L) }, 0);
+      flight = t < 1 ? requestAnimationFrame(step) : 0;
+    };
+    flight = requestAnimationFrame(step);
   }
 
   function renderSheet(d) {
