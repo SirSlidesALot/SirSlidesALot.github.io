@@ -14,7 +14,8 @@ data. These credit lines travel with them.
   GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all
   rights reserved.
 - **Sentinel-2** (terrain colour): Contains modified Copernicus Sentinel data 2025;
-  for Jeju, 2022; for Fjallabak, 2020; for Trollstigen, 2019; for the Hiraethog Moors, 2023.
+  for Jeju, 2022; for Fjallabak, 2020; for Trollstigen, 2019; for the Hiraethog Moors, 2023;
+  for Sölden, 2022.
 - **ESA WorldCover** (forest and bare ground on most maps):
   © ESA WorldCover project 2021 / Contains modified Copernicus Sentinel data
   (2021) processed by ESA WorldCover consortium, CC BY 4.0.
@@ -28,6 +29,9 @@ data. These credit lines travel with them.
   under NSF-OPP awards 1043681, 1559691, 1542736, 1810976, and 2129685. CC BY 4.0.
 - **Kartverket** (terrain of Trollstigen): Contains data from Kartverket © Kartverket,
   CC BY 4.0.
+- **BEV ALS DTM** (terrain of Sölden; its relief preview here): Contains data from
+  BEV (Bundesamt für Eich- und Vermessungswesen), ALS DTM Höhenraster 1 m,
+  [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 - **Welsh Government LiDAR** (terrain of the Hiraethog Moors): Contains public sector
   information licensed under the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
 - **IGN Spain MDT02** (terrain of Masca): derived from MDT02 CC-BY 4.0 scne.es

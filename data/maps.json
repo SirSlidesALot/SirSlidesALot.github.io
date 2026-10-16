@@ -4174,6 +4174,73 @@
    }
   },
   {
+   "id": "soelden",
+   "map": "soelden_alms",
+   "title": "Soelden Alms",
+   "region": "Ötztal, Tyrol, Austria",
+   "status": "next",
+   "pitch": "The alm roads above Sölden in the Ötztal: about 118 km of narrow gravel road climbing 500-650 m from the village through spruce forest to the alpine pastures and huts on both flanks of the valley, Gaislach Alm, Gampe Thaya, Kleble Alm, Stallwies Alm and Hochsölden, with the Ötztaler Gletscherstraße and the valley road as the way in. To be built from Austria's 1 m airborne laser survey.",
+   "sources": [
+    "BEV ALS DTM",
+    "Sentinel-2",
+    "ESA WorldCover",
+    "OpenStreetMap"
+   ],
+   "lat": 46.956,
+   "lon": 11.0,
+   "extent_km": 8.19,
+   "cell_m": 2.0,
+   "footprint": [
+    [10.944864, 46.920089],
+    [10.945198, 46.929299],
+    [10.945531, 46.938508],
+    [10.945865, 46.947718],
+    [10.946199, 46.956927],
+    [10.946533, 46.966137],
+    [10.946867, 46.975346],
+    [10.947202, 46.984556],
+    [10.947537, 46.993765],
+    [10.960996, 46.993535],
+    [10.974456, 46.993304],
+    [10.987915, 46.993071],
+    [11.001374, 46.992837],
+    [11.014833, 46.9926],
+    [11.028292, 46.992363],
+    [11.041751, 46.992123],
+    [11.05521, 46.991883],
+    [11.054856, 46.982674],
+    [11.054504, 46.973465],
+    [11.054151, 46.964256],
+    [11.053798, 46.955047],
+    [11.053446, 46.945838],
+    [11.053094, 46.936629],
+    [11.052742, 46.927421],
+    [11.05239, 46.918212],
+    [11.03895, 46.918452],
+    [11.025509, 46.918691],
+    [11.012069, 46.918928],
+    [10.998628, 46.919163],
+    [10.985188, 46.919397],
+    [10.971747, 46.919629],
+    [10.958306, 46.91986],
+    [10.944864, 46.920089]
+   ],
+   "events": 0,
+   "images": [
+    {
+     "full": "maps/soelden/01.jpg",
+     "thumb": "maps/soelden/01_t.jpg",
+     "caption": "The map's area from Sentinel-2, July 2022: Sölden in the valley, the alm roads pale threads through the forest"
+    },
+    {
+     "full": "maps/soelden/02.jpg",
+     "thumb": "maps/soelden/02_t.jpg",
+     "caption": "The relief and its roads: gravel alm roads in yellow, rougher tracks in blue, closed ones in violet"
+    }
+   ],
+   "params_generated_utc": null
+  },
+  {
    "id": "thasos_island",
    "map": "thasos_island",
    "title": "Thasos",
