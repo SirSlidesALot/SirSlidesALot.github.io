@@ -4230,27 +4230,32 @@
     {
      "full": "maps/soelden/01.jpg",
      "thumb": "maps/soelden/01_t.jpg",
-     "caption": "Above Sölden, the gravel climb towards Gaislach Alm folds through the forest"
+     "caption": "Above Sölden, the Ötztal runs north between forested slopes laced with gravel alm tracks"
     },
     {
      "full": "maps/soelden/02.jpg",
      "thumb": "maps/soelden/02_t.jpg",
-     "caption": "Gravel alm tracks on the forested slopes east of Sölden, the village below"
+     "caption": "Above Sölden, the gravel climb towards Gaislach Alm folds through the forest"
     },
     {
      "full": "maps/soelden/03.jpg",
      "thumb": "maps/soelden/03_t.jpg",
-     "caption": "Across the Ötztal from the west: Sölden under the forested east slope, alm huts above"
+     "caption": "A gravel alm track on the high meadows south-west of Sölden, the Vorderer Brunnenkogel across the valley"
     },
     {
      "full": "maps/soelden/04.jpg",
      "thumb": "maps/soelden/04_t.jpg",
-     "caption": "Sölden from the forest on the west side, the east side's alm tracks across the valley"
+     "caption": "Above the Kleble Alm road, across the Ötztal to Sölden and the Gaislach Alm track"
     },
     {
      "full": "maps/soelden/05.jpg",
      "thumb": "maps/soelden/05_t.jpg",
-     "caption": "From the Rettenbach alm track, across to the east side's forest and high meadows"
+     "caption": "Sölden from the forest on the west side, the east side's alm tracks across the valley"
+    },
+    {
+     "full": "maps/soelden/06.jpg",
+     "thumb": "maps/soelden/06_t.jpg",
+     "caption": "A stone bench by Heide Alm, the Söldenkogel across the Ötztal"
     }
    ],
    "params_generated_utc": "2026-10-16T10:16:46+00:00",
