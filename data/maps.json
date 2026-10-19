@@ -1126,6 +1126,74 @@
    }
   },
   {
+   "id": "blackcanyon",
+   "map": "gunnison_canyon",
+   "title": "Black Canyon of the Gunnison",
+   "region": "Montrose, Colorado, United States",
+   "status": "next",
+   "pitch": "The Black Canyon of the Gunnison in western Colorado: a gorge of dark gneiss 520-760 m deep and only about 400 m from rim to rim at the Narrows. The paved South Rim Road runs 9.4 km along the lip from the park entrance to High Point, stopping at overlooks that hang over the void (Chasm View, Painted Wall, Sunset View); the gravel North Rim Drive faces it across the canyon; and the East Portal Road drops some 620 m to the river at up to 16 %. Two rims, two separate places to drive, with no road between them. To be built from 1 m USGS 3DEP LiDAR, with sky courses over the canyon from the rim car parks.",
+   "sources": [
+    "USGS 3DEP",
+    "Sentinel-2",
+    "ESA WorldCover",
+    "OpenStreetMap",
+    "Copernicus GLO-30"
+   ],
+   "lat": 38.555,
+   "lon": -107.69625,
+   "extent_km": 8.19,
+   "cell_m": 2.0,
+   "footprint": [
+    [-107.741805, 38.517037],
+    [-107.742155, 38.526255],
+    [-107.742505, 38.535473],
+    [-107.742855, 38.544691],
+    [-107.743206, 38.553908],
+    [-107.743557, 38.563126],
+    [-107.743907, 38.572344],
+    [-107.744258, 38.581561],
+    [-107.744609, 38.590779],
+    [-107.732865, 38.591054],
+    [-107.72112, 38.591328],
+    [-107.709375, 38.591601],
+    [-107.69763, 38.591872],
+    [-107.685884, 38.592143],
+    [-107.674139, 38.592412],
+    [-107.662393, 38.59268],
+    [-107.650647, 38.592947],
+    [-107.650308, 38.583728],
+    [-107.649969, 38.57451],
+    [-107.64963, 38.565291],
+    [-107.649292, 38.556073],
+    [-107.648953, 38.546854],
+    [-107.648615, 38.537636],
+    [-107.648276, 38.528417],
+    [-107.647938, 38.519199],
+    [-107.659672, 38.518933],
+    [-107.671406, 38.518666],
+    [-107.68314, 38.518397],
+    [-107.694873, 38.518127],
+    [-107.706606, 38.517857],
+    [-107.718339, 38.517585],
+    [-107.730072, 38.517312],
+    [-107.741805, 38.517037]
+   ],
+   "events": 0,
+   "images": [
+    {
+     "full": "maps/blackcanyon/01.jpg",
+     "thumb": "maps/blackcanyon/01_t.jpg",
+     "caption": "The map's area from Sentinel-2, June 2023: the Gunnison River winding through the canyon, the rims wooded with oak and pinyon; the white boxes are the planned sky courses"
+    },
+    {
+     "full": "maps/blackcanyon/02.jpg",
+     "thumb": "maps/blackcanyon/02_t.jpg",
+     "caption": "The relief and its roads: paved rim and canyon roads in red, gravel and minor roads in yellow, tracks in cyan, the river in blue; white boxes are the planned sky courses"
+    }
+   ],
+   "params_generated_utc": null
+  },
+  {
    "id": "hardknott",
    "map": "hardknott_pass",
    "title": "Hardknott Pass",
