@@ -15,7 +15,7 @@ data. These credit lines travel with them.
   rights reserved.
 - **Sentinel-2** (terrain colour): Contains modified Copernicus Sentinel data 2025;
   for Jeju, 2022; for Fjallabak, 2020; for Trollstigen, 2019; for the Hiraethog Moors, 2023;
-  for Sölden, 2022.
+  for Sölden and Dead Horse Point, 2022.
 - **ESA WorldCover** (forest and bare ground on most maps):
   © ESA WorldCover project 2021 / Contains modified Copernicus Sentinel data
   (2021) processed by ESA WorldCover consortium, CC BY 4.0.
@@ -32,6 +32,8 @@ data. These credit lines travel with them.
 - **BEV ALS DTM** (terrain of Sölden; its relief preview here): Contains data from
   BEV (Bundesamt für Eich- und Vermessungswesen), ALS DTM Höhenraster 1 m,
   [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+- **USGS 3DEP** (terrain of Dead Horse Point): public domain; Map services and data
+  available from U.S. Geological Survey, National Geospatial Program.
 - **Welsh Government LiDAR** (terrain of the Hiraethog Moors): Contains public sector
   information licensed under the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
 - **IGN Spain MDT02** (terrain of Masca): derived from MDT02 CC-BY 4.0 scne.es
