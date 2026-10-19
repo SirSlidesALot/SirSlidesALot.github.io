@@ -1586,7 +1586,7 @@
    "title": "Hiraethog Moors",
    "region": "Denbighshire and Conwy, North Wales, United Kingdom",
    "status": "development",
-   "pitch": "The Denbigh Moors (Mynydd Hiraethog) in North Wales: the fast moorland triangle of the A543, B4501 and A5 past Llyn Brenig, open heather and forestry up to 604 m, driven on the left. Built from 1 m Welsh Government LiDAR.",
+   "pitch": "The Denbigh Moors (Mynydd Hiraethog) in North Wales: the fast moorland triangle of the A543, B4501 and A5 past Llyn Brenig, open heather and forestry on the high moor, driven on the left. Built from 1 m Welsh Government LiDAR.",
    "sources": [
     "Welsh Government LiDAR",
     "Sentinel-2",
@@ -1957,7 +1957,7 @@
    "title": "Jeju",
    "region": "Jeju-do, South Korea",
    "status": "development",
-   "pitch": "A 33 km window on Jeju's volcanic heart: both roads over Hallasan's shoulder, the 1100 Road to the highland at 1,100 m and the 516 Road through the Seongpanak forest, from Jeju City down to Seogwipo. Three hill climbs and a four-stage rally, with the coast at both ends.",
+   "pitch": "A 33 km window on Jeju's volcanic heart: both roads over Hallasan's shoulder, the 1100 Road to the highland at 1,100 m and the 516 Road through the Seongpanak forest, from Jeju City down to Seogwipo. Four hill climbs and four gravel rally stages, with the coast at both ends.",
    "sources": [
     "Copernicus GLO-30",
     "Sentinel-2",
