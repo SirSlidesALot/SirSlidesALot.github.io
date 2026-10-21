@@ -14,15 +14,15 @@ data. These credit lines travel with them.
   GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all
   rights reserved.
 - **Sentinel-2** (terrain colour): Contains modified Copernicus Sentinel data 2025;
-  for Jeju, 2022; for Fjallabak, 2020; for Trollstigen, 2019; for the Hiraethog Moors, the Black Canyon
-  and Grossglockner, 2023; for Sölden and Dead Horse Point, 2022; for Black Bear Pass and El Hierro, 2021;
+  for Jeju, 2022; for Fjallabak, 2020; for Trollstigen, 2019; for the Hiraethog Moors, the Black Canyon,
+  Grossglockner and Umbrail, 2023; for Sölden and Dead Horse Point, 2022; for Black Bear Pass and El Hierro, 2021;
   for Mount Washington, 2026.
 - **ESA WorldCover** (forest and bare ground on most maps):
   © ESA WorldCover project 2021 / Contains modified Copernicus Sentinel data
   (2021) processed by ESA WorldCover consortium, CC BY 4.0.
 - **IGN LiDAR HD** (terrain of Col de Bavella, Ouessant and the Col de Turini): Source: IGN, LiDAR HD,
   Licence Ouverte Etalab 2.0.
-- **swisstopo swissALTI3D** (terrain of the Tremola): © swisstopo.
+- **swisstopo swissALTI3D** (terrain of the Tremola and Umbrail): © swisstopo.
 - **Environment Agency LiDAR** (terrain of Hardknott Pass): © Environment Agency
   copyright and/or database right 2022. All rights reserved. Licensed under the
   [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
@@ -46,6 +46,10 @@ data. These credit lines travel with them.
   Licence Ouverte Etalab 2.0.
 - **EMODnet Bathymetry** (Ouessant's seabed where Litto3D has gaps, and El Hierro's seabed): EMODnet
   Bathymetry Consortium, EMODnet Digital Bathymetry (DTM), CC BY 4.0.
+- **Regione Lombardia DTM 5x5** (terrain of Umbrail's Bormio side): Contains data from Regione Lombardia,
+  DTM 5x5 (ed. 2015), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+- **South Tyrol DTM 2.5 m** (terrain of Umbrail's Trafoi side): Autonomous Province of Bolzano - South Tyrol,
+  CC0 1.0.
 - **theLIST Tasmania** (terrain of the Kent Group, fitted to its contours): Contours
   10m, Spot Heights and Coastline from the LIST © State of Tasmania, CC BY 3.0 AU.
 - **Geoscience Australia AusBathyTopo** (the Kent Group's seabed): © Commonwealth
