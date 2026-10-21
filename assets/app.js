@@ -44,6 +44,7 @@
       data = d;
       rings = (ti && ti.s2) || {};
       if (d.credit) document.querySelector("#credit-line em").textContent = d.credit;
+      renderStats(d.stats);
       build();
     })
     .catch(() => {
@@ -430,6 +431,30 @@
     };
     container.addEventListener("pointerup", up, { passive: true, capture: true });
     container.addEventListener("pointercancel", up, { passive: true, capture: true });
+  }
+
+  // The project in numbers: every figure is summed from the maps' build files by
+  // showcase.py at each site export, each with the date it was counted.
+  function renderStats(s) {
+    const box = document.getElementById("stats");
+    if (!s || !s.items || !s.items.length) return;
+    const day = (iso) => new Date(`${iso}T00:00:00Z`).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
+    const one = s.items.every((it) => it.as_of === s.as_of);
+    const dl = el("dl", "facts stats");
+    s.items.forEach((it) => {
+      const div = el("div");
+      div.dataset.key = it.key;
+      const dd = el("dd", null, fmt(it.value));
+      if (it.unit) dd.append(" ", el("small", null, it.unit));
+      div.append(el("dt", null, it.label), dd);
+      if (it.note) div.append(el("p", "note", it.note));
+      if (!one) div.append(el("p", "note asof", `as of ${day(it.as_of)}`));
+      if (it.names && it.names.length) div.title = it.names.join(", ");
+      dl.append(div);
+    });
+    box.append(dl);
+    if (one) box.append(el("p", "asof", `Counted from the build files, ${day(s.as_of)}`));
+    box.hidden = false;
   }
 
   function renderLists() {

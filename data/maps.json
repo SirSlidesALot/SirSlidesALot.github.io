@@ -1626,7 +1626,9 @@
      "caption": "The relief and its roads: paved rim and canyon roads in red, gravel and minor roads in yellow, tracks in cyan, the river in blue; white boxes are the planned sky courses"
     }
    ],
-   "params_generated_utc": null
+   "params_generated_utc": "2026-10-19T07:44:10+00:00",
+   "elev_min_m": 1707,
+   "elev_max_m": 2681
   },
   {
    "id": "hardknott",
@@ -6243,7 +6245,7 @@
     [24.508631, 40.534297],
     [24.460314, 40.533244]
    ],
-   "events": 17,
+   "events": 20,
    "images": [
     {
      "full": "maps/thasos_island/01.jpg",
@@ -8514,5 +8516,93 @@
    "note": "A small Atlantic island built from 0.5 m LiDAR."
   }
  ],
- "credit": "Built by SirSlidesALot, with a quiet collaborator who measured every road, has never driven one, and left a keepsake on every map for whoever stops to find it."
+ "credit": "Built by SirSlidesALot, with a quiet collaborator who measured every road, has never driven one, and left a keepsake on every map for whoever stops to find it.",
+ "stats": {
+  "as_of": "2026-10-21",
+  "items": [
+   {
+    "key": "maps",
+    "label": "Maps",
+    "value": 24,
+    "unit": "",
+    "note": "22 drivable, 2 being started",
+    "as_of": "2026-10-21"
+   },
+   {
+    "key": "roads",
+    "label": "Drivable road",
+    "value": 14888,
+    "unit": "km",
+    "note": "in 22 maps",
+    "as_of": "2026-10-21"
+   },
+   {
+    "key": "events",
+    "label": "Events",
+    "value": 144,
+    "unit": "",
+    "note": "71 time trials",
+    "as_of": "2026-10-21"
+   },
+   {
+    "key": "area",
+    "label": "Real ground",
+    "value": 8191,
+    "unit": "km²",
+    "note": "at true scale",
+    "as_of": "2026-10-21"
+   },
+   {
+    "key": "countries",
+    "label": "Countries",
+    "value": 14,
+    "unit": "",
+    "note": "",
+    "names": [
+     "Australia",
+     "Austria",
+     "Finland",
+     "France",
+     "Greece",
+     "Iceland",
+     "Israel",
+     "Italy",
+     "Norway",
+     "South Korea",
+     "Spain",
+     "Switzerland",
+     "United Kingdom",
+     "United States"
+    ],
+    "as_of": "2026-10-21"
+   },
+   {
+    "key": "elevation",
+    "label": "Elevation sources",
+    "value": 17,
+    "unit": "",
+    "note": "",
+    "names": [
+     "ArcticDEM",
+     "AusBathyTopo",
+     "BEV ALS DTM",
+     "Copernicus GLO-30",
+     "EMODnet Bathymetry",
+     "Environment Agency LiDAR",
+     "IGN LiDAR HD",
+     "IGN Spain LiDAR",
+     "Kartverket",
+     "Lombardy DTM5",
+     "National Land Survey of Finland",
+     "SHOM Litto3D",
+     "South Tyrol DTM",
+     "USGS 3DEP",
+     "Welsh Government LiDAR",
+     "swisstopo swissALTI3D",
+     "theLIST Tasmania"
+    ],
+    "as_of": "2026-10-21"
+   }
+  ]
+ }
 }
