@@ -14,8 +14,9 @@ data. These credit lines travel with them.
   GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all
   rights reserved.
 - **Sentinel-2** (terrain colour): Contains modified Copernicus Sentinel data 2025;
-  for Jeju, 2022; for Fjallabak, 2020; for Trollstigen, 2019; for the Hiraethog Moors and the Black Canyon, 2023;
-  for Sölden and Dead Horse Point, 2022.
+  for Jeju, 2022; for Fjallabak, 2020; for Trollstigen, 2019; for the Hiraethog Moors, the Black Canyon
+  and Grossglockner, 2023; for Sölden and Dead Horse Point, 2022; for Black Bear Pass and El Hierro, 2021;
+  for Mount Washington, 2026.
 - **ESA WorldCover** (forest and bare ground on most maps):
   © ESA WorldCover project 2021 / Contains modified Copernicus Sentinel data
   (2021) processed by ESA WorldCover consortium, CC BY 4.0.
@@ -29,18 +30,21 @@ data. These credit lines travel with them.
   under NSF-OPP awards 1043681, 1559691, 1542736, 1810976, and 2129685. CC BY 4.0.
 - **Kartverket** (terrain of Trollstigen): Contains data from Kartverket © Kartverket,
   CC BY 4.0.
-- **BEV ALS DTM** (terrain of Sölden; its relief preview here): Contains data from
+- **BEV ALS DTM** (terrain of Sölden and Grossglockner; Sölden's relief preview here): Contains data from
   BEV (Bundesamt für Eich- und Vermessungswesen), ALS DTM Höhenraster 1 m,
   [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
-- **USGS 3DEP** (terrain of Dead Horse Point and the Black Canyon of the Gunnison; its relief preview here): public domain; Map services and data
+- **USGS 3DEP** (terrain of Dead Horse Point, the Black Canyon of the Gunnison, Black Bear Pass and Mount Washington;
+  their relief previews here): public domain; Map services and data
   available from U.S. Geological Survey, National Geospatial Program.
+- **National Land Survey of Finland** (terrain of Ouninpohja): Contains data from the National Land Survey of
+  Finland Elevation model 2 m, 03/2020-02/2025, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 - **Welsh Government LiDAR** (terrain of the Hiraethog Moors): Contains public sector
   information licensed under the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
-- **IGN Spain MDT02** (terrain of Masca): derived from MDT02 CC-BY 4.0 scne.es
+- **IGN Spain MDT02** (terrain of Masca and El Hierro): derived from MDT02 CC-BY 4.0 scne.es
   (Instituto Geográfico Nacional / CNIG).
 - **SHOM / IGN Litto3D** (Ouessant's seabed): Source: SHOM / IGN, Litto3D,
   Licence Ouverte Etalab 2.0.
-- **EMODnet Bathymetry** (Ouessant's seabed where Litto3D has gaps): EMODnet
+- **EMODnet Bathymetry** (Ouessant's seabed where Litto3D has gaps, and El Hierro's seabed): EMODnet
   Bathymetry Consortium, EMODnet Digital Bathymetry (DTM), CC BY 4.0.
 - **theLIST Tasmania** (terrain of the Kent Group, fitted to its contours): Contours
   10m, Spot Heights and Coastline from the LIST © State of Tasmania, CC BY 3.0 AU.
