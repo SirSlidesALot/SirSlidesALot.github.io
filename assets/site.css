@@ -13,7 +13,7 @@
   --display: "Barlow Condensed", "Arial Narrow", "Roboto Condensed", sans-serif;
   --body: "Barlow", "Segoe UI", system-ui, sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
-  --index-w: 340px;
+  --index-w: 400px;  /* 340 px of list + the overlap: the list ends where the globe begins */
   --index-overlap: 60px;  /* the globe starts this far inside the index: the index's fade lies over it */
   --scroll-thumb: rgba(139, 157, 171, 0.28);
   --scroll-thumb-hover: rgba(232, 163, 58, 0.7);
@@ -44,7 +44,8 @@ img { max-width: 100%; display: block; }
 #index {
   position: absolute; top: 0; left: 0; bottom: 0;
   width: var(--index-w);
-  padding: calc(24px + env(safe-area-inset-top, 0px)) 22px calc(20px + env(safe-area-inset-bottom, 0px));
+  /* the right padding keeps every line of the list (text, rules, hover rows) out of the fade over the globe */
+  padding: calc(24px + env(safe-area-inset-top, 0px)) calc(22px + var(--index-overlap)) calc(20px + env(safe-area-inset-bottom, 0px)) 22px;
   display: flex; flex-direction: column; gap: 22px;
   overflow-y: auto;
   /* opaque up to where the globe begins, then the whole fade over the globe: a fade that starts over the bare page
