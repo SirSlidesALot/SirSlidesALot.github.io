@@ -14,6 +14,9 @@
   --body: "Barlow", "Segoe UI", system-ui, sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
   --index-w: 340px;
+  --index-overlap: 60px;  /* the globe starts this far inside the index: the index's fade lies over it */
+  --scroll-thumb: rgba(139, 157, 171, 0.28);
+  --scroll-thumb-hover: rgba(232, 163, 58, 0.7);
   --sheet-w: 460px;
 }
 
@@ -44,9 +47,31 @@ img { max-width: 100%; display: block; }
   padding: calc(24px + env(safe-area-inset-top, 0px)) 22px calc(20px + env(safe-area-inset-bottom, 0px));
   display: flex; flex-direction: column; gap: 22px;
   overflow-y: auto;
-  background: linear-gradient(90deg, rgba(10, 15, 20, 0.94) 70%, rgba(10, 15, 20, 0));
+  /* opaque up to where the globe begins, then the whole fade over the globe: a fade that starts over the bare page
+     (the same ink) draws nothing, which is why the old 70 % stop read weak */
+  background: linear-gradient(90deg, rgba(10, 15, 20, 0.94) calc(100% - var(--index-overlap)), rgba(10, 15, 20, 0));
+  /* the scrollbar on the screen's edge, never between the list and the globe: rtl moves it left, children read ltr */
+  direction: rtl;
   pointer-events: auto;
   z-index: 2;
+}
+#index > * { direction: ltr; }
+#index::-webkit-scrollbar { width: 10px; }
+#index::-webkit-scrollbar-track { background: transparent; }
+#index::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb) padding-box;
+  border: 3px solid transparent;
+  border-radius: 6px;
+}
+#index::-webkit-scrollbar-thumb:hover, #index::-webkit-scrollbar-thumb:active {
+  background: var(--scroll-thumb-hover) padding-box;
+  border-width: 2px;
+}
+#index::-webkit-scrollbar-button { display: none; height: 0; }
+/* Firefox (and any engine without the -webkit- pseudo-elements): the standard thin scrollbar in the same colours */
+@supports not selector(::-webkit-scrollbar) {
+  #index { scrollbar-width: thin; scrollbar-color: var(--scroll-thumb) transparent; }
+  #index:hover { scrollbar-color: var(--scroll-thumb-hover) transparent; }
 }
 .eyebrow, .section-label {
   margin: 0;
@@ -214,7 +239,7 @@ img { max-width: 100%; display: block; }
 .lb-nav:hover { opacity: 1; color: var(--amber); }
 
 @media (min-width: 821px) {
-  #globe { left: calc(var(--index-w) - 60px); }
+  #globe { left: calc(var(--index-w) - var(--index-overlap)); }
   #app.sheet-open #globe { right: var(--sheet-w); }
 }
 
@@ -225,6 +250,7 @@ img { max-width: 100%; display: block; }
   #index {
     position: relative; width: auto;
     background: var(--ink);
+    direction: ltr;
     padding: 20px 16px calc(24px + env(safe-area-inset-bottom, 0px));
     overflow: visible;
   }
