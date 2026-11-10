@@ -1131,7 +1131,7 @@
    "title": "Fjallabak",
    "region": "Southern Highlands, Iceland",
    "status": "development",
-   "pitch": "The offroad map: Landmannalaugar's rhyolite mountains, the Laugahraun lava and the crater lakes, and the F208 Fjallabaksleið east through the ford-cut Jökuldalir valleys to Eldgjá. 230 km of gravel F-road and track and dozens of river fords, on 26.62 km of highland. Built from 2 m ArcticDEM.",
+   "pitch": "The offroad map: Landmannalaugar's rhyolite mountains, the Laugahraun lava and the crater lakes, and the F208 Fjallabaksleið east through the ford-cut Jökuldalir valleys to Eldgjá. 229 km of gravel F-road and track and dozens of river fords, on 26.62 km of highland. Built from 2 m ArcticDEM.",
    "sources": [
     "ArcticDEM",
     "Sentinel-2",
@@ -2720,7 +2720,7 @@
      "caption": "Over El Hierro's north-east, looking west across the uplands and their tracks"
     }
    ],
-   "params_generated_utc": "2026-10-20T13:21:59+00:00",
+   "params_generated_utc": "2026-10-23T09:34:14+00:00",
    "water_m": 0.0,
    "elev_min_m": 0,
    "elev_max_m": 1500,
@@ -3445,7 +3445,7 @@
     [126.453342, 33.23847],
     [126.409421, 33.237562]
    ],
-   "events": 8,
+   "events": 11,
    "images": [
     {
      "full": "maps/jeju/01.jpg",
@@ -4159,7 +4159,8 @@
    "sources": [
     "Copernicus GLO-30",
     "Sentinel-2",
-    "OpenStreetMap"
+    "OpenStreetMap",
+    "ESA WorldCover"
    ],
    "lat": 32.8205,
    "lon": 35.5815,
@@ -6527,7 +6528,7 @@
      "caption": "A stone bench by Heide Alm, the Söldenkogel across the Ötztal"
     }
    ],
-   "params_generated_utc": "2026-10-16T10:16:46+00:00",
+   "params_generated_utc": "2026-10-21T06:46:57+00:00",
    "elev_min_m": 1309,
    "elev_max_m": 3254,
    "plate": {
@@ -9154,7 +9155,7 @@
  ],
  "credit": "Built by SirSlidesALot, with a quiet collaborator who measured every road, has never driven one, and left a keepsake on every map for whoever stops to find it.",
  "stats": {
-  "as_of": "2026-10-27",
+  "as_of": "2026-11-10",
   "items": [
    {
     "key": "maps",
@@ -9162,23 +9163,23 @@
     "value": 24,
     "unit": "",
     "note": "24 drivable, 0 being started",
-    "as_of": "2026-10-27"
+    "as_of": "2026-11-10"
    },
    {
     "key": "roads",
     "label": "Drivable road",
-    "value": 15347,
+    "value": 15392,
     "unit": "km",
     "note": "in 24 maps",
-    "as_of": "2026-10-27"
+    "as_of": "2026-11-10"
    },
    {
     "key": "events",
     "label": "Events",
-    "value": 156,
+    "value": 159,
     "unit": "",
-    "note": "81 time trials",
-    "as_of": "2026-10-27"
+    "note": "83 time trials",
+    "as_of": "2026-11-10"
    },
    {
     "key": "area",
@@ -9186,7 +9187,7 @@
     "value": 8727,
     "unit": "km²",
     "note": "at true scale",
-    "as_of": "2026-10-27"
+    "as_of": "2026-11-10"
    },
    {
     "key": "countries",
@@ -9210,7 +9211,7 @@
      "United Kingdom",
      "United States"
     ],
-    "as_of": "2026-10-27"
+    "as_of": "2026-11-10"
    },
    {
     "key": "elevation",
@@ -9237,7 +9238,7 @@
      "swisstopo swissALTI3D",
      "theLIST Tasmania"
     ],
-    "as_of": "2026-10-27"
+    "as_of": "2026-11-10"
    }
   ]
  }
