@@ -439,11 +439,36 @@
     {
      "full": "maps/blackbear/01.jpg",
      "thumb": "maps/blackbear/01_t.jpg",
-     "caption": "The map's area from Sentinel-2, August 2021: spruce-fir forest in the valleys, scree and tundra on the ridges above the treeline, a few dark tarns"
+     "caption": "High over the Black Bear Pass road, looking north-north-west past Ingram Peak and Ajax Peak"
     },
     {
      "full": "maps/blackbear/02.jpg",
      "thumb": "maps/blackbear/02_t.jpg",
+     "caption": "From beside the signature bench, west-north-west down onto the Black Bear Pass road"
+    },
+    {
+     "full": "maps/blackbear/03.jpg",
+     "thumb": "maps/blackbear/03_t.jpg",
+     "caption": "Over the Tomboy mine site, west-south-west along the Imogene Pass road towards Ajax Peak and Silver Lake Basin"
+    },
+    {
+     "full": "maps/blackbear/04.jpg",
+     "thumb": "maps/blackbear/04_t.jpg",
+     "caption": "Near the top of the Imogene Pass road at about 4,000 m, north-north-east over the tundra to United States Mountain"
+    },
+    {
+     "full": "maps/blackbear/05.jpg",
+     "thumb": "maps/blackbear/05_t.jpg",
+     "caption": "On the Imogene Pass road, looking east up the climb: 277 m in 1.4 km"
+    },
+    {
+     "full": "maps/blackbear/06.jpg",
+     "thumb": "maps/blackbear/06_t.jpg",
+     "caption": "The map's area from Sentinel-2, August 2021: spruce-fir forest in the valleys, scree and tundra on the ridges above the treeline, a few dark tarns"
+    },
+    {
+     "full": "maps/blackbear/07.jpg",
+     "thumb": "maps/blackbear/07_t.jpg",
      "caption": "The relief and its roads: Black Bear Pass in magenta, Imogene Pass in yellow, paved roads (US 550 among them) in white, other gravel roads in orange, tracks in tan; cyan dots are fords, blue dots waterfalls, red squares the passes"
     }
    ],
