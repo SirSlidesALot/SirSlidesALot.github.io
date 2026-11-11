@@ -4619,16 +4619,31 @@
     {
      "full": "maps/masca/01.jpg",
      "thumb": "maps/masca/01_t.jpg",
-     "caption": "Masca and its gorge from the air"
+     "caption": "From Risco Verde on the TF-436, west-south-west down the Masca valley to Lomo de Masca, the Roque de la Fortaleza above it"
     },
     {
      "full": "maps/masca/02.jpg",
      "thumb": "maps/masca/02_t.jpg",
-     "caption": "The climb to the Cherfe pass"
+     "caption": "From the Montaña del Conde, east-north-east over El Palmar and Las Huertas, the road to Teno Alto in front"
     },
     {
      "full": "maps/masca/03.jpg",
      "thumb": "maps/masca/03_t.jpg",
+     "caption": "The TF-436 below the Pico del Cuervo, looking west-north-west towards the sea"
+    },
+    {
+     "full": "maps/masca/04.jpg",
+     "thumb": "maps/masca/04_t.jpg",
+     "caption": "Masca and its gorge from the air"
+    },
+    {
+     "full": "maps/masca/05.jpg",
+     "thumb": "maps/masca/05_t.jpg",
+     "caption": "The climb to the Cherfe pass"
+    },
+    {
+     "full": "maps/masca/06.jpg",
+     "thumb": "maps/masca/06_t.jpg",
      "caption": "Cliffs of the Teno coast"
     }
    ],
@@ -9180,7 +9195,7 @@
  ],
  "credit": "Built by SirSlidesALot, with a quiet collaborator who measured every road, has never driven one, and left a keepsake on every map for whoever stops to find it.",
  "stats": {
-  "as_of": "2026-11-10",
+  "as_of": "2026-11-11",
   "items": [
    {
     "key": "maps",
@@ -9188,7 +9203,7 @@
     "value": 24,
     "unit": "",
     "note": "24 drivable, 0 being started",
-    "as_of": "2026-11-10"
+    "as_of": "2026-11-11"
    },
    {
     "key": "roads",
@@ -9196,7 +9211,7 @@
     "value": 15392,
     "unit": "km",
     "note": "in 24 maps",
-    "as_of": "2026-11-10"
+    "as_of": "2026-11-11"
    },
    {
     "key": "events",
@@ -9204,7 +9219,7 @@
     "value": 159,
     "unit": "",
     "note": "83 time trials",
-    "as_of": "2026-11-10"
+    "as_of": "2026-11-11"
    },
    {
     "key": "area",
@@ -9212,7 +9227,7 @@
     "value": 8727,
     "unit": "km²",
     "note": "at true scale",
-    "as_of": "2026-11-10"
+    "as_of": "2026-11-11"
    },
    {
     "key": "countries",
@@ -9236,7 +9251,7 @@
      "United Kingdom",
      "United States"
     ],
-    "as_of": "2026-11-10"
+    "as_of": "2026-11-11"
    },
    {
     "key": "elevation",
@@ -9263,7 +9278,7 @@
      "swisstopo swissALTI3D",
      "theLIST Tasmania"
     ],
-    "as_of": "2026-11-10"
+    "as_of": "2026-11-11"
    }
   ]
  }
