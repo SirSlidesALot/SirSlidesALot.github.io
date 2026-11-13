@@ -3115,6 +3115,16 @@
      "full": "maps/hiraethog/03.jpg",
      "thumb": "maps/hiraethog/03_t.jpg",
      "caption": "The junction at Cerrigydrudion"
+    },
+    {
+     "full": "maps/hiraethog/04.jpg",
+     "thumb": "maps/hiraethog/04_t.jpg",
+     "caption": "Cerrigydrudion's slate roofs from the south-west"
+    },
+    {
+     "full": "maps/hiraethog/05.jpg",
+     "thumb": "maps/hiraethog/05_t.jpg",
+     "caption": "At the wheel on the A543, heading north over the moor"
     }
    ],
    "params_generated_utc": "2026-10-11T17:23:30+00:00",
@@ -9195,7 +9205,7 @@
  ],
  "credit": "Built by SirSlidesALot, with a quiet collaborator who measured every road, has never driven one, and left a keepsake on every map for whoever stops to find it.",
  "stats": {
-  "as_of": "2026-11-11",
+  "as_of": "2026-11-13",
   "items": [
    {
     "key": "maps",
@@ -9203,7 +9213,7 @@
     "value": 24,
     "unit": "",
     "note": "24 drivable, 0 being started",
-    "as_of": "2026-11-11"
+    "as_of": "2026-11-13"
    },
    {
     "key": "roads",
@@ -9211,7 +9221,7 @@
     "value": 15392,
     "unit": "km",
     "note": "in 24 maps",
-    "as_of": "2026-11-11"
+    "as_of": "2026-11-13"
    },
    {
     "key": "events",
@@ -9219,7 +9229,7 @@
     "value": 159,
     "unit": "",
     "note": "83 time trials",
-    "as_of": "2026-11-11"
+    "as_of": "2026-11-13"
    },
    {
     "key": "area",
@@ -9227,7 +9237,7 @@
     "value": 8727,
     "unit": "km²",
     "note": "at true scale",
-    "as_of": "2026-11-11"
+    "as_of": "2026-11-13"
    },
    {
     "key": "countries",
@@ -9251,7 +9261,7 @@
      "United Kingdom",
      "United States"
     ],
-    "as_of": "2026-11-11"
+    "as_of": "2026-11-13"
    },
    {
     "key": "elevation",
@@ -9278,7 +9288,7 @@
      "swisstopo swissALTI3D",
      "theLIST Tasmania"
     ],
-    "as_of": "2026-11-11"
+    "as_of": "2026-11-13"
    }
   ]
  }
