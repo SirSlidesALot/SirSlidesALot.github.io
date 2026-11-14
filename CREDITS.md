@@ -22,12 +22,22 @@ data. These credit lines travel with them.
   (2021) processed by ESA WorldCover consortium, CC BY 4.0.
 - **IGN LiDAR HD** (terrain of Col de Bavella, Ouessant and the Col de Turini): Source: IGN, LiDAR HD,
   Licence Ouverte Etalab 2.0.
+- **IGN BD TOPO** (building heights, wall materials and road widths of the Col de Bavella, Ouessant and the
+  Col de Turini): Source: IGN, BD TOPO, Licence Ouverte Etalab 2.0.
+- **IGN BD ORTHO** (roof colours of the Col de Bavella and the Col de Turini): Source: IGN, BD ORTHO,
+  Licence Ouverte Etalab 2.0.
+- **French cadastre** (Ouessant's field walls): Source: DGFiP, Plan cadastral informatisé (Etalab),
+  Licence Ouverte Etalab 2.0.
 - **swisstopo swissALTI3D** (terrain of the Tremola and Umbrail): © swisstopo.
 - **Environment Agency LiDAR** (terrain of Hardknott Pass): © Environment Agency
   copyright and/or database right 2022. All rights reserved. Licensed under the
   [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
+- **Ordnance Survey OSTN15** (the British grid transformation of Hardknott Pass and the Hiraethog Moors):
+  OSTN15 © Crown copyright 2016, Ordnance Survey, BSD 2-clause licence.
 - **ArcticDEM** (terrain of Fjallabak): DEMs provided by the Polar Geospatial Center
   under NSF-OPP awards 1043681, 1559691, 1542736, 1810976, and 2129685. CC BY 4.0.
+- **IslandsDEM** (terrain of Fjallabak's Frostastaðavatn shore, and its cross-check): Contains IslandsDEM v1.0
+  data from Náttúrufræðistofnun (formerly Landmælingar Íslands), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 - **Kartverket** (terrain of Trollstigen): Contains data from Kartverket © Kartverket,
   CC BY 4.0.
 - **BEV ALS DTM** (terrain of Sölden and Grossglockner; Sölden's relief preview here): Contains data from
