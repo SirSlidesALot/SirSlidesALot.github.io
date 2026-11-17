@@ -20,6 +20,8 @@ data. These credit lines travel with them.
 - **ESA WorldCover** (forest and bare ground on most maps):
   © ESA WorldCover project 2021 / Contains modified Copernicus Sentinel data
   (2021) processed by ESA WorldCover consortium, CC BY 4.0.
+- **Meta / WRI canopy height** (where Lake Kinneret's trees stand outside the woods, and how tall: CHMv2 crown
+  tops): Canopy height data by Meta and World Resources Institute, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 - **IGN LiDAR HD** (terrain of Col de Bavella, Ouessant and the Col de Turini): Source: IGN, LiDAR HD,
   Licence Ouverte Etalab 2.0.
 - **IGN BD TOPO** (building heights, wall materials and road widths of the Col de Bavella, Ouessant and the

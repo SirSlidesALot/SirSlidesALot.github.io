@@ -4200,7 +4200,8 @@
     "Copernicus GLO-30",
     "Sentinel-2",
     "OpenStreetMap",
-    "ESA WorldCover"
+    "ESA WorldCover",
+    "Meta / WRI canopy height"
    ],
    "lat": 32.8205,
    "lon": 35.5815,
@@ -4251,26 +4252,41 @@
     {
      "full": "maps/kinneret/02.jpg",
      "thumb": "maps/kinneret/02_t.jpg",
-     "caption": "The ring road on the shore"
+     "caption": "The lake along its length"
     },
     {
      "full": "maps/kinneret/03.jpg",
      "thumb": "maps/kinneret/03_t.jpg",
-     "caption": "Dual carriageway along the water"
+     "caption": "Solar water heaters on the roofs of Tiberias"
     },
     {
      "full": "maps/kinneret/04.jpg",
      "thumb": "maps/kinneret/04_t.jpg",
-     "caption": "Cliffs above the western shore"
+     "caption": "The ring road on the shore"
     },
     {
      "full": "maps/kinneret/05.jpg",
      "thumb": "maps/kinneret/05_t.jpg",
-     "caption": "An overpass in the Galilee hills"
+     "caption": "Palm and olive groves"
     },
     {
      "full": "maps/kinneret/06.jpg",
      "thumb": "maps/kinneret/06_t.jpg",
+     "caption": "Dual carriageway along the water"
+    },
+    {
+     "full": "maps/kinneret/07.jpg",
+     "thumb": "maps/kinneret/07_t.jpg",
+     "caption": "Cliffs above the western shore"
+    },
+    {
+     "full": "maps/kinneret/08.jpg",
+     "thumb": "maps/kinneret/08_t.jpg",
+     "caption": "An overpass in the Galilee hills"
+    },
+    {
+     "full": "maps/kinneret/09.jpg",
+     "thumb": "maps/kinneret/09_t.jpg",
      "caption": "The route 89 viaduct"
     }
    ],
@@ -5021,30 +5037,45 @@
     {
      "full": "maps/naxos_island/01.jpg",
      "thumb": "maps/naxos_island/01_t.jpg",
-     "caption": "Cresting toward the sea"
+     "caption": "Chora across the harbour"
     },
     {
      "full": "maps/naxos_island/02.jpg",
      "thumb": "maps/naxos_island/02_t.jpg",
-     "caption": "The road down from Moni"
+     "caption": "Cresting toward the sea"
     },
     {
      "full": "maps/naxos_island/03.jpg",
      "thumb": "maps/naxos_island/03_t.jpg",
-     "caption": "Inland hills"
+     "caption": "Chalki in the Tragea valley"
     },
     {
      "full": "maps/naxos_island/04.jpg",
      "thumb": "maps/naxos_island/04_t.jpg",
-     "caption": "The salt pans on the south-west coast"
+     "caption": "Filoti on the slopes of Mount Zas"
     },
     {
      "full": "maps/naxos_island/05.jpg",
      "thumb": "maps/naxos_island/05_t.jpg",
+     "caption": "The road down from Moni"
+    },
+    {
+     "full": "maps/naxos_island/06.jpg",
+     "thumb": "maps/naxos_island/06_t.jpg",
+     "caption": "Inland hills"
+    },
+    {
+     "full": "maps/naxos_island/07.jpg",
+     "thumb": "maps/naxos_island/07_t.jpg",
+     "caption": "The salt pans on the south-west coast"
+    },
+    {
+     "full": "maps/naxos_island/08.jpg",
+     "thumb": "maps/naxos_island/08_t.jpg",
      "caption": "A stone bench above the sea"
     }
    ],
-   "params_generated_utc": "2026-09-28T10:19:03+00:00",
+   "params_generated_utc": "2026-11-14T14:35:36+00:00",
    "water_m": 0.0,
    "elev_min_m": 0,
    "elev_max_m": 991,
@@ -6949,30 +6980,40 @@
     {
      "full": "maps/thasos_island/02.jpg",
      "thumb": "maps/thasos_island/02_t.jpg",
-     "caption": "Golden Beach"
+     "caption": "The road into Panagia"
     },
     {
      "full": "maps/thasos_island/03.jpg",
      "thumb": "maps/thasos_island/03_t.jpg",
-     "caption": "Mount Athos from the south-west coast"
+     "caption": "Two churches on the coast road at Limenaria"
     },
     {
      "full": "maps/thasos_island/04.jpg",
      "thumb": "maps/thasos_island/04_t.jpg",
-     "caption": "Pine-covered ridges above the sea"
+     "caption": "Golden Beach"
     },
     {
      "full": "maps/thasos_island/05.jpg",
      "thumb": "maps/thasos_island/05_t.jpg",
-     "caption": "A chapel beside a mountain road"
+     "caption": "Mount Athos from the south-west coast"
     },
     {
      "full": "maps/thasos_island/06.jpg",
      "thumb": "maps/thasos_island/06_t.jpg",
+     "caption": "Pine-covered ridges above the sea"
+    },
+    {
+     "full": "maps/thasos_island/07.jpg",
+     "thumb": "maps/thasos_island/07_t.jpg",
+     "caption": "A chapel beside a mountain road"
+    },
+    {
+     "full": "maps/thasos_island/08.jpg",
+     "thumb": "maps/thasos_island/08_t.jpg",
      "caption": "A road through the olive groves"
     }
    ],
-   "params_generated_utc": "2026-09-29T03:46:50+00:00",
+   "params_generated_utc": "2026-11-14T16:28:44+00:00",
    "water_m": 0.0,
    "elev_min_m": 0,
    "elev_max_m": 1191,
@@ -9214,7 +9255,7 @@
  ],
  "credit": "Built by SirSlidesALot, with a quiet collaborator who measured every road, has never driven one, and left a keepsake on every map for whoever stops to find it.",
  "stats": {
-  "as_of": "2026-11-14",
+  "as_of": "2026-11-17",
   "items": [
    {
     "key": "maps",
@@ -9222,15 +9263,15 @@
     "value": 24,
     "unit": "",
     "note": "24 drivable, 0 being started",
-    "as_of": "2026-11-14"
+    "as_of": "2026-11-17"
    },
    {
     "key": "roads",
     "label": "Drivable road",
-    "value": 15392,
+    "value": 15385,
     "unit": "km",
     "note": "in 24 maps",
-    "as_of": "2026-11-14"
+    "as_of": "2026-11-17"
    },
    {
     "key": "events",
@@ -9238,7 +9279,7 @@
     "value": 159,
     "unit": "",
     "note": "83 time trials",
-    "as_of": "2026-11-14"
+    "as_of": "2026-11-17"
    },
    {
     "key": "area",
@@ -9246,7 +9287,7 @@
     "value": 8727,
     "unit": "km²",
     "note": "at true scale",
-    "as_of": "2026-11-14"
+    "as_of": "2026-11-17"
    },
    {
     "key": "countries",
@@ -9270,7 +9311,7 @@
      "United Kingdom",
      "United States"
     ],
-    "as_of": "2026-11-14"
+    "as_of": "2026-11-17"
    },
    {
     "key": "elevation",
@@ -9298,7 +9339,7 @@
      "swisstopo swissALTI3D",
      "theLIST Tasmania"
     ],
-    "as_of": "2026-11-14"
+    "as_of": "2026-11-17"
    }
   ]
  }
