@@ -9,14 +9,14 @@ data. These credit lines travel with them.
 - **OpenStreetMap** (roads, places, features): © OpenStreetMap contributors,
   licensed under the [Open Database License (ODbL) 1.0](https://opendatacommons.org/licenses/odbl/1-0/).
 - **Copernicus DEM GLO-30** (terrain of Lake Kinneret, the Small Crater, Thasos,
-  Naxos and Jeju; the distant land round several other maps): produced using
+  Naxos and Jeju; the Wakatipu Basin's high ground; the distant land round several other maps): produced using
   Copernicus WorldDEM-30 © DLR e.V. 2010-2014 and © Airbus Defence and Space
   GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all
   rights reserved.
 - **Sentinel-2** (terrain colour): Contains modified Copernicus Sentinel data 2025;
   for Jeju, 2022; for Fjallabak, 2020; for Trollstigen, 2019; for the Hiraethog Moors, the Black Canyon,
   Grossglockner and Umbrail, 2023; for Sölden and Dead Horse Point, 2022; for Black Bear Pass and El Hierro, 2021;
-  for Mount Washington, 2026.
+  for Mount Washington, 2026; for the Wakatipu Basin, 2024.
 - **ESA WorldCover** (forest and bare ground on most maps):
   © ESA WorldCover project 2021 / Contains modified Copernicus Sentinel data
   (2021) processed by ESA WorldCover consortium, CC BY 4.0.
@@ -50,6 +50,8 @@ data. These credit lines travel with them.
   available from U.S. Geological Survey, National Geospatial Program.
 - **National Land Survey of Finland** (terrain of Ouninpohja): Contains data from the National Land Survey of
   Finland Elevation model 2 m, 03/2020-02/2025, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+- **LINZ LiDAR** (terrain of the Wakatipu Basin): Sourced from the LINZ Data Service and licensed by Otago Regional
+  Council / Queenstown-Lakes District Council for re-use under the Creative Commons Attribution 4.0 International licence.
 - **Welsh Government LiDAR** (terrain of the Hiraethog Moors): Contains public sector
   information licensed under the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
 - **IGN Spain MDT02** (terrain of Masca and El Hierro): derived from MDT02 CC-BY 4.0 scne.es
