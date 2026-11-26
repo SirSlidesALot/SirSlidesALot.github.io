@@ -7389,6 +7389,16 @@
      "full": "maps/tremola/04.jpg",
      "thumb": "maps/tremola/04_t.jpg",
      "caption": "The Leventina valley below the pass"
+    },
+    {
+     "full": "maps/tremola/05.jpg",
+     "thumb": "maps/tremola/05_t.jpg",
+     "caption": "The cobbled Tremola winding down from Tramiora"
+    },
+    {
+     "full": "maps/tremola/06.jpg",
+     "thumb": "maps/tremola/06_t.jpg",
+     "caption": "The Gotthard roads above Airolo, from La C'are"
     }
    ],
    "params_generated_utc": "2026-10-11T06:03:25+00:00",
@@ -8135,6 +8145,16 @@
      "full": "maps/turini/03.jpg",
      "thumb": "maps/turini/03_t.jpg",
      "caption": "High road with the coast beyond"
+    },
+    {
+     "full": "maps/turini/04.jpg",
+     "thumb": "maps/turini/04_t.jpg",
+     "caption": "West from Cabanes Vieilles over the forests"
+    },
+    {
+     "full": "maps/turini/05.jpg",
+     "thumb": "maps/turini/05_t.jpg",
+     "caption": "The Authion circuit at Mille Fourches"
     }
    ],
    "params_generated_utc": "2026-10-11T18:26:40+00:00",
@@ -8457,7 +8477,7 @@
    "lat": 46.56532,
    "lon": 10.43921,
    "extent_km": 10.24,
-   "cell_m": 2.5,
+   "cell_m": 1.25,
    "footprint": [
     [10.371263, 46.520077],
     [10.371553, 46.531593],
@@ -8516,7 +8536,7 @@
      "caption": "Hairpins in the forest on the Stelvio's Trafoi side"
     }
    ],
-   "params_generated_utc": "2026-10-26T23:46:01+00:00",
+   "params_generated_utc": "2026-11-23T02:34:01+00:00",
    "elev_min_m": 1294,
    "elev_max_m": 3094,
    "plate": {
@@ -8823,7 +8843,7 @@
    "title": "Wakatipu Basin",
    "region": "Queenstown, Otago, New Zealand",
    "status": "development",
-   "pitch": "The Wakatipu Basin behind Queenstown, driven on the left: the Remarkables ski-field road climbs 1260 m in 12.8 km from the Kawarau to the ski field, Coronet Peak Road 8 km up the basin's north wall, and the Crown Range road zig-zags up out of the basin, with Glencoe Road's gravel across the Crown Terrace. Lake Hayes, Frankton on Lake Wakatipu's shore and the braided Shotover in between, 306 km of roads in all. Built from LINZ's 1 m LiDAR, with Copernicus GLO-30 on the high ground the survey left out.",
+   "pitch": "The Wakatipu Basin behind Queenstown, driven on the left: the Remarkables ski-field road climbs 1260 m in 12.8 km from the Kawarau to the ski field, Coronet Peak Road 8 km up the basin's north wall, and the Crown Range road zig-zags up out of the basin, with Glencoe Road's gravel across the Crown Terrace. Lake Hayes, Frankton on Lake Wakatipu's shore and the braided Shotover in between, 307 km of roads in all. Built from LINZ's 1 m LiDAR, with Copernicus GLO-30 on the high ground the survey left out.",
    "sources": [
     "LINZ LiDAR",
     "Copernicus GLO-30",
@@ -9637,7 +9657,7 @@
  ],
  "credit": "Built by SirSlidesALot, with a quiet collaborator who measured every road, has never driven one, and left a keepsake on every map for whoever stops to find it.",
  "stats": {
-  "as_of": "2026-11-22",
+  "as_of": "2026-11-26",
   "items": [
    {
     "key": "maps",
@@ -9645,15 +9665,15 @@
     "value": 25,
     "unit": "",
     "note": "25 drivable, 0 being started",
-    "as_of": "2026-11-22"
+    "as_of": "2026-11-26"
    },
    {
     "key": "roads",
     "label": "Drivable road",
-    "value": 15691,
+    "value": 15692,
     "unit": "km",
     "note": "in 25 maps",
-    "as_of": "2026-11-22"
+    "as_of": "2026-11-26"
    },
    {
     "key": "events",
@@ -9661,7 +9681,7 @@
     "value": 163,
     "unit": "",
     "note": "86 time trials",
-    "as_of": "2026-11-22"
+    "as_of": "2026-11-26"
    },
    {
     "key": "area",
@@ -9669,7 +9689,7 @@
     "value": 8995,
     "unit": "km²",
     "note": "at true scale",
-    "as_of": "2026-11-22"
+    "as_of": "2026-11-26"
    },
    {
     "key": "countries",
@@ -9694,7 +9714,7 @@
      "United Kingdom",
      "United States"
     ],
-    "as_of": "2026-11-22"
+    "as_of": "2026-11-26"
    },
    {
     "key": "elevation",
@@ -9723,7 +9743,7 @@
      "swisstopo swissALTI3D",
      "theLIST Tasmania"
     ],
-    "as_of": "2026-11-22"
+    "as_of": "2026-11-26"
    }
   ]
  }
